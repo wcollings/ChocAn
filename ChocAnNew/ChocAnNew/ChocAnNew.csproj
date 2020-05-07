@@ -74,6 +74,9 @@
     <Compile Include="AddProviderMenu.Designer.cs">
       <DependentUpon>AddProviderMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseCADataSet.cs">
+      <DependentUpon>DatabaseCADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseCADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

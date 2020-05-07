@@ -52,18 +52,20 @@
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.Location = new System.Drawing.Point(35, 38);
+            this.nameLbl.Location = new System.Drawing.Point(52, 58);
+            this.nameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(51, 20);
+            this.nameLbl.Size = new System.Drawing.Size(78, 29);
             this.nameLbl.TabIndex = 0;
             this.nameLbl.Text = "Name";
             // 
             // nameTxtBox
             // 
             this.nameTxtBox.Enabled = false;
-            this.nameTxtBox.Location = new System.Drawing.Point(92, 38);
+            this.nameTxtBox.Location = new System.Drawing.Point(138, 58);
+            this.nameTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nameTxtBox.Name = "nameTxtBox";
-            this.nameTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.nameTxtBox.Size = new System.Drawing.Size(296, 29);
             this.nameTxtBox.TabIndex = 1;
             this.nameTxtBox.Text = "";
             // 
@@ -71,18 +73,20 @@
             // 
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLbl.Location = new System.Drawing.Point(35, 64);
+            this.emailLbl.Location = new System.Drawing.Point(52, 98);
+            this.emailLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(48, 20);
+            this.emailLbl.Size = new System.Drawing.Size(74, 29);
             this.emailLbl.TabIndex = 2;
             this.emailLbl.Text = "Email";
             // 
             // emailTxtBox
             // 
             this.emailTxtBox.Enabled = false;
-            this.emailTxtBox.Location = new System.Drawing.Point(92, 64);
+            this.emailTxtBox.Location = new System.Drawing.Point(138, 98);
+            this.emailTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.emailTxtBox.Size = new System.Drawing.Size(296, 29);
             this.emailTxtBox.TabIndex = 3;
             this.emailTxtBox.Text = "";
             // 
@@ -90,27 +94,30 @@
             // 
             this.addressLbl.AutoSize = true;
             this.addressLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLbl.Location = new System.Drawing.Point(18, 90);
+            this.addressLbl.Location = new System.Drawing.Point(27, 138);
+            this.addressLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addressLbl.Name = "addressLbl";
-            this.addressLbl.Size = new System.Drawing.Size(68, 20);
+            this.addressLbl.Size = new System.Drawing.Size(102, 29);
             this.addressLbl.TabIndex = 4;
             this.addressLbl.Text = "Address";
             // 
             // addressTxtBox
             // 
             this.addressTxtBox.Enabled = false;
-            this.addressTxtBox.Location = new System.Drawing.Point(92, 90);
+            this.addressTxtBox.Location = new System.Drawing.Point(138, 138);
+            this.addressTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addressTxtBox.Name = "addressTxtBox";
-            this.addressTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.addressTxtBox.Size = new System.Drawing.Size(296, 29);
             this.addressTxtBox.TabIndex = 5;
             this.addressTxtBox.Text = "";
             // 
             // cityTxtBox
             // 
             this.cityTxtBox.Enabled = false;
-            this.cityTxtBox.Location = new System.Drawing.Point(92, 116);
+            this.cityTxtBox.Location = new System.Drawing.Point(138, 178);
+            this.cityTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cityTxtBox.Name = "cityTxtBox";
-            this.cityTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.cityTxtBox.Size = new System.Drawing.Size(296, 29);
             this.cityTxtBox.TabIndex = 7;
             this.cityTxtBox.Text = "";
             // 
@@ -118,18 +125,20 @@
             // 
             this.cityLbl.AutoSize = true;
             this.cityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityLbl.Location = new System.Drawing.Point(48, 116);
+            this.cityLbl.Location = new System.Drawing.Point(72, 178);
+            this.cityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cityLbl.Name = "cityLbl";
-            this.cityLbl.Size = new System.Drawing.Size(35, 20);
+            this.cityLbl.Size = new System.Drawing.Size(53, 29);
             this.cityLbl.TabIndex = 6;
             this.cityLbl.Text = "City";
             // 
             // stateTxtBox
             // 
             this.stateTxtBox.Enabled = false;
-            this.stateTxtBox.Location = new System.Drawing.Point(92, 142);
+            this.stateTxtBox.Location = new System.Drawing.Point(138, 218);
+            this.stateTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stateTxtBox.Name = "stateTxtBox";
-            this.stateTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.stateTxtBox.Size = new System.Drawing.Size(296, 29);
             this.stateTxtBox.TabIndex = 9;
             this.stateTxtBox.Text = "";
             // 
@@ -137,18 +146,20 @@
             // 
             this.stateLbl.AutoSize = true;
             this.stateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stateLbl.Location = new System.Drawing.Point(35, 142);
+            this.stateLbl.Location = new System.Drawing.Point(52, 218);
+            this.stateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stateLbl.Name = "stateLbl";
-            this.stateLbl.Size = new System.Drawing.Size(48, 20);
+            this.stateLbl.Size = new System.Drawing.Size(68, 29);
             this.stateLbl.TabIndex = 8;
             this.stateLbl.Text = "State";
             // 
             // okBtn
             // 
             this.okBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okBtn.Location = new System.Drawing.Point(111, 243);
+            this.okBtn.Location = new System.Drawing.Point(166, 374);
+            this.okBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.okBtn.Name = "okBtn";
-            this.okBtn.Size = new System.Drawing.Size(98, 34);
+            this.okBtn.Size = new System.Drawing.Size(147, 52);
             this.okBtn.TabIndex = 11;
             this.okBtn.Text = "OK";
             this.okBtn.UseVisualStyleBackColor = true;
@@ -157,9 +168,10 @@
             // zipTxtBox
             // 
             this.zipTxtBox.Enabled = false;
-            this.zipTxtBox.Location = new System.Drawing.Point(92, 168);
+            this.zipTxtBox.Location = new System.Drawing.Point(138, 258);
+            this.zipTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.zipTxtBox.Name = "zipTxtBox";
-            this.zipTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.zipTxtBox.Size = new System.Drawing.Size(296, 29);
             this.zipTxtBox.TabIndex = 12;
             this.zipTxtBox.Text = "";
             // 
@@ -167,18 +179,20 @@
             // 
             this.zipLbl.AutoSize = true;
             this.zipLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zipLbl.Location = new System.Drawing.Point(10, 168);
+            this.zipLbl.Location = new System.Drawing.Point(15, 258);
+            this.zipLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.zipLbl.Name = "zipLbl";
-            this.zipLbl.Size = new System.Drawing.Size(73, 20);
+            this.zipLbl.Size = new System.Drawing.Size(112, 29);
             this.zipLbl.TabIndex = 13;
             this.zipLbl.Text = "Zip Code";
             // 
             // IDTxtBox
             // 
             this.IDTxtBox.Enabled = false;
-            this.IDTxtBox.Location = new System.Drawing.Point(92, 12);
+            this.IDTxtBox.Location = new System.Drawing.Point(138, 18);
+            this.IDTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDTxtBox.Name = "IDTxtBox";
-            this.IDTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.IDTxtBox.Size = new System.Drawing.Size(296, 29);
             this.IDTxtBox.TabIndex = 15;
             this.IDTxtBox.Text = "";
             // 
@@ -186,9 +200,10 @@
             // 
             this.IDLbl.AutoSize = true;
             this.IDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDLbl.Location = new System.Drawing.Point(57, 12);
+            this.IDLbl.Location = new System.Drawing.Point(86, 18);
+            this.IDLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IDLbl.Name = "IDLbl";
-            this.IDLbl.Size = new System.Drawing.Size(26, 20);
+            this.IDLbl.Size = new System.Drawing.Size(36, 29);
             this.IDLbl.TabIndex = 14;
             this.IDLbl.Text = "ID";
             // 
@@ -196,9 +211,10 @@
             // 
             this.statusLbl.AutoSize = true;
             this.statusLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLbl.Location = new System.Drawing.Point(30, 191);
+            this.statusLbl.Location = new System.Drawing.Point(45, 294);
+            this.statusLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLbl.Name = "statusLbl";
-            this.statusLbl.Size = new System.Drawing.Size(56, 20);
+            this.statusLbl.Size = new System.Drawing.Size(79, 29);
             this.statusLbl.TabIndex = 16;
             this.statusLbl.Text = "Status";
             // 
@@ -206,9 +222,10 @@
             // 
             this.validatedCheckBox.AutoSize = true;
             this.validatedCheckBox.Enabled = false;
-            this.validatedCheckBox.Location = new System.Drawing.Point(92, 194);
+            this.validatedCheckBox.Location = new System.Drawing.Point(138, 298);
+            this.validatedCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.validatedCheckBox.Name = "validatedCheckBox";
-            this.validatedCheckBox.Size = new System.Drawing.Size(76, 17);
+            this.validatedCheckBox.Size = new System.Drawing.Size(111, 24);
             this.validatedCheckBox.TabIndex = 17;
             this.validatedCheckBox.Text = "Validated?";
             this.validatedCheckBox.UseVisualStyleBackColor = true;
@@ -217,26 +234,28 @@
             // 
             this.reasonLbl.AutoSize = true;
             this.reasonLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reasonLbl.Location = new System.Drawing.Point(18, 217);
+            this.reasonLbl.Location = new System.Drawing.Point(27, 334);
+            this.reasonLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.reasonLbl.Name = "reasonLbl";
-            this.reasonLbl.Size = new System.Drawing.Size(65, 20);
+            this.reasonLbl.Size = new System.Drawing.Size(96, 29);
             this.reasonLbl.TabIndex = 19;
             this.reasonLbl.Text = "Reason";
             // 
             // reasonTxtBox
             // 
             this.reasonTxtBox.Enabled = false;
-            this.reasonTxtBox.Location = new System.Drawing.Point(92, 217);
+            this.reasonTxtBox.Location = new System.Drawing.Point(138, 334);
+            this.reasonTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reasonTxtBox.Name = "reasonTxtBox";
-            this.reasonTxtBox.Size = new System.Drawing.Size(199, 20);
+            this.reasonTxtBox.Size = new System.Drawing.Size(296, 29);
             this.reasonTxtBox.TabIndex = 18;
             this.reasonTxtBox.Text = "";
             // 
             // viewMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 288);
+            this.ClientSize = new System.Drawing.Size(480, 443);
             this.Controls.Add(this.reasonLbl);
             this.Controls.Add(this.reasonTxtBox);
             this.Controls.Add(this.validatedCheckBox);
@@ -256,8 +275,10 @@
             this.Controls.Add(this.emailLbl);
             this.Controls.Add(this.nameTxtBox);
             this.Controls.Add(this.nameLbl);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "viewMember";
             this.Text = "View Member";
+            this.Load += new System.EventHandler(this.viewMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

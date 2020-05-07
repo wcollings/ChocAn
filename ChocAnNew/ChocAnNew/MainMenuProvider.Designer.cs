@@ -38,9 +38,10 @@
             // valMemBtn
             // 
             this.valMemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valMemBtn.Location = new System.Drawing.Point(58, 50);
+            this.valMemBtn.Location = new System.Drawing.Point(87, 77);
+            this.valMemBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.valMemBtn.Name = "valMemBtn";
-            this.valMemBtn.Size = new System.Drawing.Size(249, 39);
+            this.valMemBtn.Size = new System.Drawing.Size(374, 60);
             this.valMemBtn.TabIndex = 0;
             this.valMemBtn.Text = "Validate Member";
             this.valMemBtn.UseVisualStyleBackColor = true;
@@ -50,18 +51,20 @@
             // 
             this.chocAnMMAdminLbl.AutoSize = true;
             this.chocAnMMAdminLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chocAnMMAdminLbl.Location = new System.Drawing.Point(39, 9);
+            this.chocAnMMAdminLbl.Location = new System.Drawing.Point(58, 14);
+            this.chocAnMMAdminLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.chocAnMMAdminLbl.Name = "chocAnMMAdminLbl";
-            this.chocAnMMAdminLbl.Size = new System.Drawing.Size(287, 25);
+            this.chocAnMMAdminLbl.Size = new System.Drawing.Size(425, 37);
             this.chocAnMMAdminLbl.TabIndex = 1;
             this.chocAnMMAdminLbl.Text = "Main Menu ChocAn Provider";
             // 
             // rptServBtn
             // 
             this.rptServBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rptServBtn.Location = new System.Drawing.Point(58, 95);
+            this.rptServBtn.Location = new System.Drawing.Point(87, 146);
+            this.rptServBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rptServBtn.Name = "rptServBtn";
-            this.rptServBtn.Size = new System.Drawing.Size(249, 39);
+            this.rptServBtn.Size = new System.Drawing.Size(374, 60);
             this.rptServBtn.TabIndex = 2;
             this.rptServBtn.Text = "Report Services";
             this.rptServBtn.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // accProDirBtn
             // 
             this.accProDirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accProDirBtn.Location = new System.Drawing.Point(58, 140);
+            this.accProDirBtn.Location = new System.Drawing.Point(87, 215);
+            this.accProDirBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.accProDirBtn.Name = "accProDirBtn";
-            this.accProDirBtn.Size = new System.Drawing.Size(249, 39);
+            this.accProDirBtn.Size = new System.Drawing.Size(374, 60);
             this.accProDirBtn.TabIndex = 3;
             this.accProDirBtn.Text = "Access Provider Directory";
             this.accProDirBtn.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // genProRptBtn
             // 
             this.genProRptBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genProRptBtn.Location = new System.Drawing.Point(58, 185);
+            this.genProRptBtn.Location = new System.Drawing.Point(87, 285);
+            this.genProRptBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.genProRptBtn.Name = "genProRptBtn";
-            this.genProRptBtn.Size = new System.Drawing.Size(249, 39);
+            this.genProRptBtn.Size = new System.Drawing.Size(374, 60);
             this.genProRptBtn.TabIndex = 4;
             this.genProRptBtn.Text = "Generate Provider Report";
             this.genProRptBtn.UseVisualStyleBackColor = true;
@@ -91,16 +96,17 @@
             // 
             // MainMenuProvider
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 239);
+            this.ClientSize = new System.Drawing.Size(548, 368);
             this.Controls.Add(this.genProRptBtn);
             this.Controls.Add(this.accProDirBtn);
             this.Controls.Add(this.rptServBtn);
             this.Controls.Add(this.chocAnMMAdminLbl);
             this.Controls.Add(this.valMemBtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainMenuProvider";
-            this.Text = "Main Menu Admin";
+            this.Text = "Provider Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

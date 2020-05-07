@@ -101,5 +101,7 @@
         private System.Windows.Forms.RichTextBox searchTxtBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button submitBtn;
+        private DatabaseCADataSetTableAdapters.MembersTableAdapter membersTableAdapter;
+        private DatabaseCADataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

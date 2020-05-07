@@ -49,7 +49,8 @@ namespace ChocAnNew
                     break;
                 case "view member":
                     viewMember viewMem = new viewMember();
-                    viewMem.Show();
+                    searchMemberById();
+                    //viewMem.Show();
                     break;
             }
         }
@@ -63,6 +64,39 @@ namespace ChocAnNew
             {
                 connectionSql.Open();
             }*/
+        }
+
+        private void searchMemberById()
+        {
+            String query = ("SELECT Name, Status, Reason FROM Members WHERE Id=@id");
+            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+                command.Parameters.AddWithValue("@id", Int32.Parse(searchTxtBox.Text));
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetBoolean(1) == true) {
+                                MessageBox.Show(String.Format("{0} is validated!", reader.GetString(0)));
+                            }
+                            else
+                            {
+                                MessageBox.Show(String.Format("{0} is Suspended!", reader.GetString(0)));
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Member Id dose not exits");
+                    }
+                    reader.Close();
+                }
+            }
         }
     }
 }

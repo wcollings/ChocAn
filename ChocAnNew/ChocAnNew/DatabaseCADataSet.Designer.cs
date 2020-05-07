@@ -32,11 +32,11 @@ namespace ChocAnNew {
         
         private ServiceRecordDataTable tableServiceRecord;
         
-        private global::System.Data.DataRelation relationFK_Service_Members;
-        
         private global::System.Data.DataRelation relationFK_Service_ProviderDirectory;
         
         private global::System.Data.DataRelation relationFK_Service_Providers;
+        
+        private global::System.Data.DataRelation relationFK_Service_Members;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -272,9 +272,9 @@ namespace ChocAnNew {
                     this.tableServiceRecord.InitVars();
                 }
             }
-            this.relationFK_Service_Members = this.Relations["FK_Service_Members"];
             this.relationFK_Service_ProviderDirectory = this.Relations["FK_Service_ProviderDirectory"];
             this.relationFK_Service_Providers = this.Relations["FK_Service_Providers"];
+            this.relationFK_Service_Members = this.Relations["FK_Service_Members"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -293,10 +293,6 @@ namespace ChocAnNew {
             base.Tables.Add(this.tableProviders);
             this.tableServiceRecord = new ServiceRecordDataTable();
             base.Tables.Add(this.tableServiceRecord);
-            this.relationFK_Service_Members = new global::System.Data.DataRelation("FK_Service_Members", new global::System.Data.DataColumn[] {
-                        this.tableMembers.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableServiceRecord.MemberIdColumn}, false);
-            this.Relations.Add(this.relationFK_Service_Members);
             this.relationFK_Service_ProviderDirectory = new global::System.Data.DataRelation("FK_Service_ProviderDirectory", new global::System.Data.DataColumn[] {
                         this.tableProviderDirectory.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableServiceRecord.ServiceCodeColumn}, false);
@@ -305,6 +301,10 @@ namespace ChocAnNew {
                         this.tableProviders.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableServiceRecord.ProviderIdColumn}, false);
             this.Relations.Add(this.relationFK_Service_Providers);
+            this.relationFK_Service_Members = new global::System.Data.DataRelation("FK_Service_Members", new global::System.Data.DataColumn[] {
+                        this.tableMembers.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableServiceRecord.MemberIdColumn}, false);
+            this.Relations.Add(this.relationFK_Service_Members);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2244,17 +2244,6 @@ namespace ChocAnNew {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MembersRow MembersRow {
-                get {
-                    return ((MembersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Service_Members"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Service_Members"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ProviderDirectoryRow ProviderDirectoryRow {
                 get {
                     return ((ProviderDirectoryRow)(this.GetParentRow(this.Table.ParentRelations["FK_Service_ProviderDirectory"])));
@@ -2272,6 +2261,17 @@ namespace ChocAnNew {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Service_Providers"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public MembersRow MembersRow {
+                get {
+                    return ((MembersRow)(this.GetParentRow(this.Table.ParentRelations["FK_Service_Members"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Service_Members"]);
                 }
             }
             
@@ -2626,12 +2626,18 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM dbo.Members" +
                 "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email\r\nFROM   Members\r" +
+                "\nWHERE (Id = @id)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2653,6 +2659,32 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DatabaseCADataSet.MembersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DatabaseCADataSet.MembersDataTable dataTable = new DatabaseCADataSet.MembersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillById(DatabaseCADataSet.MembersDataTable dataTable, int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DatabaseCADataSet.MembersDataTable GetDataById(int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
             DatabaseCADataSet.MembersDataTable dataTable = new DatabaseCADataSet.MembersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4353,15 +4385,6 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(DatabaseCADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._membersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._membersTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._providerDirectoryTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ProviderDirectory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -4377,6 +4400,15 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._providersTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._membersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._membersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4399,14 +4431,6 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(DatabaseCADataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._membersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._membersTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._providerDirectoryTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ProviderDirectory.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -4420,6 +4444,14 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._providersTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._membersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._membersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4449,6 +4481,14 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._membersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._membersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._providersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Providers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4462,14 +4502,6 @@ SELECT Id, ProviderId, MemberId, ServiceCode, CurrentDateAndTime, ServiceDate, C
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._providerDirectoryTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._membersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Members.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._membersTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
