@@ -159,6 +159,7 @@
             this.cancelBtn.TabIndex = 11;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // zipTxtBox
             // 
