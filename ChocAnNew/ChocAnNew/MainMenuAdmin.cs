@@ -27,6 +27,7 @@ namespace ChocAnNew
         private void modMemBtn_Click(object sender, EventArgs e)
         {
             Search search = new Search("modify user");
+           
             search.Show();
         }
 
@@ -44,8 +45,10 @@ namespace ChocAnNew
 
         private void modProBtn_Click(object sender, EventArgs e)
         {
-            Search search = new Search("modify provider");
-            search.Show();
+            //Search search = new Search("modify provider");
+            SearchProvider search_provider = new SearchProvider();
+            search_provider.Show();
+            //search.Show();
         }
 
         private void delProBtn_Click(object sender, EventArgs e)

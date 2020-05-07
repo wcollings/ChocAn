@@ -656,7 +656,6 @@ namespace ChocAnNew {
                 this.columnState.MaxLength = 2;
                 this.columnZip.AllowDBNull = false;
                 this.columnZip.MaxLength = 5;
-                this.columnStatus.AllowDBNull = false;
                 this.columnReason.MaxLength = 25;
                 this.columnEmail.MaxLength = 50;
             }
@@ -1876,7 +1875,12 @@ namespace ChocAnNew {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Status {
                 get {
-                    return ((bool)(this[this.tableMembers.StatusColumn]));
+                    try {
+                        return ((bool)(this[this.tableMembers.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'Members\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMembers.StatusColumn] = value;
@@ -1913,6 +1917,18 @@ namespace ChocAnNew {
                 set {
                     this[this.tableMembers.EmailColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tableMembers.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tableMembers.StatusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2545,7 +2561,7 @@ namespace ChocAnNew.DatabaseCADataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Members] WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ([Street] = @Original_Street) AND ([City] = @Original_City) AND ([State] = @Original_State) AND ([Zip] = @Original_Zip) AND ([Status] = @Original_Status) AND ((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Members] WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ([Street] = @Original_Street) AND ([City] = @Original_City) AND ([State] = @Original_State) AND ([Zip] = @Original_Zip) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2553,6 +2569,7 @@ namespace ChocAnNew.DatabaseCADataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_State", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "State", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Zip", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Zip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reason", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reason", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2573,7 +2590,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Members] SET [Name] = @Name, [Street] = @Street, [City] = @City, [State] = @State, [Zip] = @Zip, [Status] = @Status, [Reason] = @Reason, [Email] = @Email WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ([Street] = @Original_Street) AND ([City] = @Original_City) AND ([State] = @Original_State) AND ([Zip] = @Original_Zip) AND ([Status] = @Original_Status) AND ((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Members] SET [Name] = @Name, [Street] = @Street, [City] = @City, [State] = @State, [Zip] = @Zip, [Status] = @Status, [Reason] = @Reason, [Email] = @Email WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ([Street] = @Original_Street) AND ([City] = @Original_City) AND ([State] = @Original_State) AND ([Zip] = @Original_Zip) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Reason = 1 AND [Reason] IS NULL) OR ([Reason] = @Original_Reason)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)));
 SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2590,6 +2607,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_State", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "State", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Zip", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Zip", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reason", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reason", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reason", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2673,7 +2691,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Name, string Original_Street, string Original_City, string Original_State, string Original_Zip, bool Original_Status, string Original_Reason, string Original_Email) {
+        public virtual int Delete(int Original_Id, string Original_Name, string Original_Street, string Original_City, string Original_State, string Original_Zip, global::System.Nullable<bool> Original_Status, string Original_Reason, string Original_Email) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
@@ -2705,22 +2723,29 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Zip));
             }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_Status));
-            if ((Original_Reason == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((Original_Status.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_Status.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Reason));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Reason == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Reason));
             }
             if ((Original_Email == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Email));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Email));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2742,7 +2767,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name, string Street, string City, string State, string Zip, bool Status, string Reason, string Email) {
+        public virtual int Insert(string Name, string Street, string City, string State, string Zip, global::System.Nullable<bool> Status, string Reason, string Email) {
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -2773,7 +2798,12 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Zip));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Status));
+            if ((Status.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Status.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((Reason == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
@@ -2812,7 +2842,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
                     string City, 
                     string State, 
                     string Zip, 
-                    bool Status, 
+                    global::System.Nullable<bool> Status, 
                     string Reason, 
                     string Email, 
                     int Original_Id, 
@@ -2821,7 +2851,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
                     string Original_City, 
                     string Original_State, 
                     string Original_Zip, 
-                    bool Original_Status, 
+                    global::System.Nullable<bool> Original_Status, 
                     string Original_Reason, 
                     string Original_Email, 
                     int Id) {
@@ -2855,7 +2885,12 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Zip));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Status));
+            if ((Status.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Status.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             if ((Reason == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
@@ -2899,24 +2934,31 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Zip));
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_Status));
-            if ((Original_Reason == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            if ((Original_Status.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_Status.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Reason));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Reason == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Reason));
             }
             if ((Original_Email == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Email));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2943,7 +2985,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
                     string City, 
                     string State, 
                     string Zip, 
-                    bool Status, 
+                    global::System.Nullable<bool> Status, 
                     string Reason, 
                     string Email, 
                     int Original_Id, 
@@ -2952,7 +2994,7 @@ SELECT Id, Name, Street, City, State, Zip, Status, Reason, Email FROM Members WH
                     string Original_City, 
                     string Original_State, 
                     string Original_Zip, 
-                    bool Original_Status, 
+                    global::System.Nullable<bool> Original_Status, 
                     string Original_Reason, 
                     string Original_Email) {
             return this.Update(Name, Street, City, State, Zip, Status, Reason, Email, Original_Id, Original_Name, Original_Street, Original_City, Original_State, Original_Zip, Original_Status, Original_Reason, Original_Email, Original_Id);
@@ -3473,11 +3515,17 @@ SELECT Id, Name, Street, City, State, Zip, Email FROM Providers WHERE (Id = @Id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Name, Street, City, State, Zip, Email FROM dbo.Providers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT Id, Name, Street, City, State, Zip, Email\r\nFROM     Providers\r\nWHERE  (Nam" +
+                "e LIKE @Name + N\'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3502,6 +3550,25 @@ SELECT Id, Name, Street, City, State, Zip, Email FROM Providers WHERE (Id = @Id)
             DatabaseCADataSet.ProvidersDataTable dataTable = new DatabaseCADataSet.ProvidersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchByName(DatabaseCADataSet.ProvidersDataTable dataTable, string Name) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

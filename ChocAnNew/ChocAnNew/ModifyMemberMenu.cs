@@ -22,9 +22,5 @@ namespace ChocAnNew
             //Or this will have to pull the rest of the information currently in the database here.
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

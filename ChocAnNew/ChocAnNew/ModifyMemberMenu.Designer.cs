@@ -159,7 +159,6 @@
             this.cancelBtn.TabIndex = 11;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // zipTxtBox
             // 
@@ -211,6 +210,7 @@
             // validatedCheckBox
             // 
             this.validatedCheckBox.AutoSize = true;
+            this.validatedCheckBox.Enabled = false;
             this.validatedCheckBox.Location = new System.Drawing.Point(92, 194);
             this.validatedCheckBox.Name = "validatedCheckBox";
             this.validatedCheckBox.Size = new System.Drawing.Size(76, 17);
@@ -230,6 +230,7 @@
             // 
             // reasonTxtBox
             // 
+            this.reasonTxtBox.Enabled = false;
             this.reasonTxtBox.Location = new System.Drawing.Point(92, 217);
             this.reasonTxtBox.Name = "reasonTxtBox";
             this.reasonTxtBox.Size = new System.Drawing.Size(199, 20);

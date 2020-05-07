@@ -22,18 +22,35 @@ namespace ChocAnNew
         public AddMemberMenu()
         {
             InitializeComponent();
-
             //Connection string is necessary to connect to the database
-
-            //This should work, I don't know why it isn't. It's some bullshit.
+            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
             //connectionString = ConfigurationManager.ConnectionStrings["ChocAnon.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
+        }
+
+        private void membersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.membersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.databaseCADataSet);
+
+        }
+
+        private void AddMemberMenu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'databaseCADataSet.Members' table. You can move, or remove it, as needed.
+            try {
+
+                this.membersTableAdapter.Fill(this.databaseCADataSet.Members);
+            }
+            catch (System.Exception ex)
+            {
+            
+            }
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
             //This is where we need to grab the data and add it into the database
-            
-            
 
             //Vars
             bool status = true;
@@ -48,13 +65,26 @@ namespace ChocAnNew
             zip = this.zipTxtBox.Text;
             reason = " ";
 
+            string query = "INSERT INTO Members(Name, Street, City, State, Zip, Email) VALUES (@MembersName, @MembersStreet, @MembersCity, @MembersState, @MembersZip, @MembersEmail)";
 
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+                command.Parameters.AddWithValue("@MembersName", name);
+                command.Parameters.AddWithValue("@MembersStreet", address);
+                command.Parameters.AddWithValue("@MembersCity", city);
+                command.Parameters.AddWithValue("@MembersState", state);
+                command.Parameters.AddWithValue("@MembersZip", zip);
+                command.Parameters.AddWithValue("@MembersEmail", email);
+                command.ExecuteScalar();
+            }
 
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
+        private void addressTxtBox_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

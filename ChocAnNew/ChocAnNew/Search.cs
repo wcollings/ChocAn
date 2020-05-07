@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 using ChocAnNew;
 
 namespace ChocAnNew
@@ -14,6 +16,8 @@ namespace ChocAnNew
     public partial class Search : Form
     {
         string choice;
+        string connectionString; //This is the database configuration location
+        SqlConnection connectionSql;
         public Search(string sentChoice)
         {
             InitializeComponent();
@@ -27,8 +31,6 @@ namespace ChocAnNew
             {
                 case "modify user":
                     //Below needs to be modified to take take from the database and put in the reason, validated bool, and ID number
-                    //Here is where we pull in the data
-                    MessageBox.Show("poopy", "this is the main name", MessageBoxButtons.OK);
                     ModifyMemberMenu modMem = new ModifyMemberMenu("This is a reason", true, this.searchTxtBox.Text);
                     modMem.Show();
                     break;
@@ -50,6 +52,17 @@ namespace ChocAnNew
                     viewMem.Show();
                     break;
             }
+        }
+
+        private void searchTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT * from";
+            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
+            /*using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+            }*/
         }
     }
 }
