@@ -65,13 +65,18 @@ namespace ChocAnNew
 
         private void accProDirBtn_Click(object sender, EventArgs e)
         {
-            ViewProviderDirectory viewProDir = new ViewProviderDirectory();
-            viewProDir.Show();
+            MainMenuProvider viewProv = new MainMenuProvider();
+            viewProv.Show();
         }
 
         private void genManRepBtn_Click(object sender, EventArgs e)
         {
             //This is where we need to put the logic to send the Manager Report
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
