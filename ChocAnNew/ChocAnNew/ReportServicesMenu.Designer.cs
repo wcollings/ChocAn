@@ -28,18 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.memIDLbl = new System.Windows.Forms.Label();
-            this.memIDTxtBox = new System.Windows.Forms.RichTextBox();
             this.proIDLbl = new System.Windows.Forms.Label();
-            this.proIDTxtBox = new System.Windows.Forms.RichTextBox();
             this.servCodeLbl = new System.Windows.Forms.Label();
-            this.servCodeTxtBox = new System.Windows.Forms.RichTextBox();
             this.servDateLbl = new System.Windows.Forms.Label();
             this.commentsTxtBox = new System.Windows.Forms.RichTextBox();
             this.commentsLbl = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ProvComboBox = new System.Windows.Forms.ComboBox();
+            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.providersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProvidersTableAdapter();
+            this.providersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.providersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.meMcomboBox = new System.Windows.Forms.ComboBox();
+            this.fKServiceProvidersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceRecordTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ServiceRecordTableAdapter();
+            this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.membersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.MembersTableAdapter();
+            this.serCodeComboBox = new System.Windows.Forms.ComboBox();
+            this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // memIDLbl
@@ -53,15 +72,6 @@
             this.memIDLbl.TabIndex = 0;
             this.memIDLbl.Text = "Member ID";
             // 
-            // memIDTxtBox
-            // 
-            this.memIDTxtBox.Location = new System.Drawing.Point(162, 72);
-            this.memIDTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.memIDTxtBox.Name = "memIDTxtBox";
-            this.memIDTxtBox.Size = new System.Drawing.Size(296, 29);
-            this.memIDTxtBox.TabIndex = 1;
-            this.memIDTxtBox.Text = "";
-            // 
             // proIDLbl
             // 
             this.proIDLbl.AutoSize = true;
@@ -73,15 +83,6 @@
             this.proIDLbl.TabIndex = 2;
             this.proIDLbl.Text = "Provider ID";
             // 
-            // proIDTxtBox
-            // 
-            this.proIDTxtBox.Location = new System.Drawing.Point(162, 33);
-            this.proIDTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.proIDTxtBox.Name = "proIDTxtBox";
-            this.proIDTxtBox.Size = new System.Drawing.Size(296, 29);
-            this.proIDTxtBox.TabIndex = 3;
-            this.proIDTxtBox.Text = "";
-            // 
             // servCodeLbl
             // 
             this.servCodeLbl.AutoSize = true;
@@ -92,15 +93,6 @@
             this.servCodeLbl.Size = new System.Drawing.Size(159, 29);
             this.servCodeLbl.TabIndex = 4;
             this.servCodeLbl.Text = "Service Code";
-            // 
-            // servCodeTxtBox
-            // 
-            this.servCodeTxtBox.Location = new System.Drawing.Point(162, 111);
-            this.servCodeTxtBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.servCodeTxtBox.Name = "servCodeTxtBox";
-            this.servCodeTxtBox.Size = new System.Drawing.Size(296, 29);
-            this.servCodeTxtBox.TabIndex = 5;
-            this.servCodeTxtBox.Text = "";
             // 
             // servDateLbl
             // 
@@ -164,26 +156,118 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
             this.dateTimePicker1.TabIndex = 12;
             // 
+            // ProvComboBox
+            // 
+            this.ProvComboBox.DataSource = this.providersBindingSource;
+            this.ProvComboBox.DisplayMember = "Id";
+            this.ProvComboBox.FormattingEnabled = true;
+            this.ProvComboBox.Location = new System.Drawing.Point(162, 33);
+            this.ProvComboBox.Name = "ProvComboBox";
+            this.ProvComboBox.Size = new System.Drawing.Size(296, 28);
+            this.ProvComboBox.TabIndex = 13;
+            this.ProvComboBox.ValueMember = "Id";
+            // 
+            // databaseCADataSet
+            // 
+            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
+            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataMember = "Providers";
+            this.providersBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // providersTableAdapter
+            // 
+            this.providersTableAdapter.ClearBeforeFill = true;
+            // 
+            // providersBindingSource1
+            // 
+            this.providersBindingSource1.DataMember = "Providers";
+            this.providersBindingSource1.DataSource = this.databaseCADataSet;
+            // 
+            // providersBindingSource2
+            // 
+            this.providersBindingSource2.DataMember = "Providers";
+            this.providersBindingSource2.DataSource = this.databaseCADataSet;
+            // 
+            // meMcomboBox
+            // 
+            this.meMcomboBox.DataSource = this.membersBindingSource;
+            this.meMcomboBox.DisplayMember = "Id";
+            this.meMcomboBox.FormattingEnabled = true;
+            this.meMcomboBox.Location = new System.Drawing.Point(161, 72);
+            this.meMcomboBox.Name = "meMcomboBox";
+            this.meMcomboBox.Size = new System.Drawing.Size(300, 28);
+            this.meMcomboBox.TabIndex = 14;
+            this.meMcomboBox.ValueMember = "Id";
+            // 
+            // fKServiceProvidersBindingSource
+            // 
+            this.fKServiceProvidersBindingSource.DataMember = "FK_Service_Providers";
+            this.fKServiceProvidersBindingSource.DataSource = this.providersBindingSource;
+            // 
+            // serviceRecordTableAdapter
+            // 
+            this.serviceRecordTableAdapter.ClearBeforeFill = true;
+            // 
+            // membersBindingSource
+            // 
+            this.membersBindingSource.DataMember = "Members";
+            this.membersBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // membersTableAdapter
+            // 
+            this.membersTableAdapter.ClearBeforeFill = true;
+            // 
+            // serCodeComboBox
+            // 
+            this.serCodeComboBox.DataSource = this.providerDirectoryBindingSource;
+            this.serCodeComboBox.DisplayMember = "ServiceName";
+            this.serCodeComboBox.FormattingEnabled = true;
+            this.serCodeComboBox.Location = new System.Drawing.Point(161, 111);
+            this.serCodeComboBox.Name = "serCodeComboBox";
+            this.serCodeComboBox.Size = new System.Drawing.Size(296, 28);
+            this.serCodeComboBox.TabIndex = 15;
+            this.serCodeComboBox.ValueMember = "Id";
+            // 
+            // providerDirectoryBindingSource
+            // 
+            this.providerDirectoryBindingSource.DataMember = "ProviderDirectory";
+            this.providerDirectoryBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // providerDirectoryTableAdapter
+            // 
+            this.providerDirectoryTableAdapter.ClearBeforeFill = true;
+            // 
             // ReportServicesMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 354);
+            this.ClientSize = new System.Drawing.Size(571, 371);
+            this.Controls.Add(this.serCodeComboBox);
+            this.Controls.Add(this.meMcomboBox);
+            this.Controls.Add(this.ProvComboBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.commentsTxtBox);
             this.Controls.Add(this.commentsLbl);
             this.Controls.Add(this.servDateLbl);
-            this.Controls.Add(this.servCodeTxtBox);
             this.Controls.Add(this.servCodeLbl);
-            this.Controls.Add(this.proIDTxtBox);
             this.Controls.Add(this.proIDLbl);
-            this.Controls.Add(this.memIDTxtBox);
             this.Controls.Add(this.memIDLbl);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ReportServicesMenu";
             this.Text = "Report Service";
+            this.Load += new System.EventHandler(this.ReportServicesMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,16 +276,27 @@
         #endregion
 
         private System.Windows.Forms.Label memIDLbl;
-        private System.Windows.Forms.RichTextBox memIDTxtBox;
         private System.Windows.Forms.Label proIDLbl;
-        private System.Windows.Forms.RichTextBox proIDTxtBox;
         private System.Windows.Forms.Label servCodeLbl;
-        private System.Windows.Forms.RichTextBox servCodeTxtBox;
         private System.Windows.Forms.Label servDateLbl;
         private System.Windows.Forms.RichTextBox commentsTxtBox;
         private System.Windows.Forms.Label commentsLbl;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox ProvComboBox;
+        private DatabaseCADataSet databaseCADataSet;
+        private System.Windows.Forms.BindingSource providersBindingSource;
+        private DatabaseCADataSetTableAdapters.ProvidersTableAdapter providersTableAdapter;
+        private System.Windows.Forms.BindingSource providersBindingSource1;
+        private System.Windows.Forms.BindingSource providersBindingSource2;
+        private System.Windows.Forms.ComboBox meMcomboBox;
+        private System.Windows.Forms.BindingSource fKServiceProvidersBindingSource;
+        private DatabaseCADataSetTableAdapters.ServiceRecordTableAdapter serviceRecordTableAdapter;
+        private System.Windows.Forms.BindingSource membersBindingSource;
+        private DatabaseCADataSetTableAdapters.MembersTableAdapter membersTableAdapter;
+        private System.Windows.Forms.ComboBox serCodeComboBox;
+        private System.Windows.Forms.BindingSource providerDirectoryBindingSource;
+        private DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter providerDirectoryTableAdapter;
     }
 }

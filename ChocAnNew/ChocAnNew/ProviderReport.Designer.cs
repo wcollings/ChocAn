@@ -38,17 +38,19 @@
             System.Windows.Forms.Label emailLabel;
             this.provGrid = new System.Windows.Forms.DataGridView();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.streetTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.zipTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProvidersTableAdapter();
             this.tableAdapterManager = new ChocAnNew.DatabaseCADataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TotalTxtBox = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             streetLabel = new System.Windows.Forms.Label();
@@ -61,17 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // provGrid
-            // 
-            this.provGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.provGrid.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.provGrid.Location = new System.Drawing.Point(32, 288);
-            this.provGrid.Name = "provGrid";
-            this.provGrid.ReadOnly = true;
-            this.provGrid.RowTemplate.Height = 28;
-            this.provGrid.Size = new System.Drawing.Size(1008, 208);
-            this.provGrid.TabIndex = 0;
-            // 
             // idLabel
             // 
             idLabel.AutoSize = true;
@@ -81,16 +72,6 @@
             idLabel.Size = new System.Drawing.Size(39, 29);
             idLabel.TabIndex = 28;
             idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Id", true));
-            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(121, 32);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(276, 35);
-            this.idTextBox.TabIndex = 29;
             // 
             // nameLabel
             // 
@@ -102,16 +83,6 @@
             nameLabel.TabIndex = 30;
             nameLabel.Text = "Name:";
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Name", true));
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(121, 64);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(276, 35);
-            this.nameTextBox.TabIndex = 31;
-            // 
             // streetLabel
             // 
             streetLabel.AutoSize = true;
@@ -121,16 +92,6 @@
             streetLabel.Size = new System.Drawing.Size(83, 29);
             streetLabel.TabIndex = 32;
             streetLabel.Text = "Street:";
-            // 
-            // streetTextBox
-            // 
-            this.streetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Street", true));
-            this.streetTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.streetTextBox.Location = new System.Drawing.Point(121, 96);
-            this.streetTextBox.Name = "streetTextBox";
-            this.streetTextBox.ReadOnly = true;
-            this.streetTextBox.Size = new System.Drawing.Size(276, 35);
-            this.streetTextBox.TabIndex = 33;
             // 
             // cityLabel
             // 
@@ -142,16 +103,6 @@
             cityLabel.TabIndex = 34;
             cityLabel.Text = "City:";
             // 
-            // cityTextBox
-            // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "City", true));
-            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityTextBox.Location = new System.Drawing.Point(121, 128);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.ReadOnly = true;
-            this.cityTextBox.Size = new System.Drawing.Size(276, 35);
-            this.cityTextBox.TabIndex = 35;
-            // 
             // stateLabel
             // 
             stateLabel.AutoSize = true;
@@ -161,16 +112,6 @@
             stateLabel.Size = new System.Drawing.Size(74, 29);
             stateLabel.TabIndex = 36;
             stateLabel.Text = "State:";
-            // 
-            // stateTextBox
-            // 
-            this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "State", true));
-            this.stateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stateTextBox.Location = new System.Drawing.Point(121, 160);
-            this.stateTextBox.Name = "stateTextBox";
-            this.stateTextBox.ReadOnly = true;
-            this.stateTextBox.Size = new System.Drawing.Size(276, 35);
-            this.stateTextBox.TabIndex = 37;
             // 
             // zipLabel
             // 
@@ -182,16 +123,6 @@
             zipLabel.TabIndex = 38;
             zipLabel.Text = "Zip:";
             // 
-            // zipTextBox
-            // 
-            this.zipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Zip", true));
-            this.zipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zipTextBox.Location = new System.Drawing.Point(121, 192);
-            this.zipTextBox.Name = "zipTextBox";
-            this.zipTextBox.ReadOnly = true;
-            this.zipTextBox.Size = new System.Drawing.Size(276, 35);
-            this.zipTextBox.TabIndex = 39;
-            // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
@@ -202,15 +133,26 @@
             emailLabel.TabIndex = 40;
             emailLabel.Text = "Email:";
             // 
-            // emailTextBox
+            // provGrid
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Email", true));
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(121, 224);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.ReadOnly = true;
-            this.emailTextBox.Size = new System.Drawing.Size(276, 35);
-            this.emailTextBox.TabIndex = 41;
+            this.provGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.provGrid.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.provGrid.Location = new System.Drawing.Point(32, 288);
+            this.provGrid.Name = "provGrid";
+            this.provGrid.ReadOnly = true;
+            this.provGrid.RowTemplate.Height = 28;
+            this.provGrid.Size = new System.Drawing.Size(1008, 208);
+            this.provGrid.TabIndex = 0;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Id", true));
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(121, 32);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(276, 35);
+            this.idTextBox.TabIndex = 29;
             // 
             // providersBindingSource
             // 
@@ -221,6 +163,66 @@
             // 
             this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
             this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Name", true));
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(121, 64);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.ReadOnly = true;
+            this.nameTextBox.Size = new System.Drawing.Size(276, 35);
+            this.nameTextBox.TabIndex = 31;
+            // 
+            // streetTextBox
+            // 
+            this.streetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Street", true));
+            this.streetTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.streetTextBox.Location = new System.Drawing.Point(121, 96);
+            this.streetTextBox.Name = "streetTextBox";
+            this.streetTextBox.ReadOnly = true;
+            this.streetTextBox.Size = new System.Drawing.Size(276, 35);
+            this.streetTextBox.TabIndex = 33;
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "City", true));
+            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityTextBox.Location = new System.Drawing.Point(121, 128);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.ReadOnly = true;
+            this.cityTextBox.Size = new System.Drawing.Size(276, 35);
+            this.cityTextBox.TabIndex = 35;
+            // 
+            // stateTextBox
+            // 
+            this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "State", true));
+            this.stateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateTextBox.Location = new System.Drawing.Point(121, 160);
+            this.stateTextBox.Name = "stateTextBox";
+            this.stateTextBox.ReadOnly = true;
+            this.stateTextBox.Size = new System.Drawing.Size(276, 35);
+            this.stateTextBox.TabIndex = 37;
+            // 
+            // zipTextBox
+            // 
+            this.zipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Zip", true));
+            this.zipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zipTextBox.Location = new System.Drawing.Point(121, 192);
+            this.zipTextBox.Name = "zipTextBox";
+            this.zipTextBox.ReadOnly = true;
+            this.zipTextBox.Size = new System.Drawing.Size(276, 35);
+            this.zipTextBox.TabIndex = 39;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Email", true));
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(121, 224);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.ReadOnly = true;
+            this.emailTextBox.Size = new System.Drawing.Size(276, 35);
+            this.emailTextBox.TabIndex = 41;
             // 
             // providersTableAdapter
             // 
@@ -245,11 +247,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 534);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 26);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Total fees";
+            // 
+            // TotalTxtBox
+            // 
+            this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTxtBox.Location = new System.Drawing.Point(141, 534);
+            this.TotalTxtBox.Name = "TotalTxtBox";
+            this.TotalTxtBox.ReadOnly = true;
+            this.TotalTxtBox.Size = new System.Drawing.Size(228, 32);
+            this.TotalTxtBox.TabIndex = 44;
+            // 
             // ProviderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 602);
+            this.Controls.Add(this.TotalTxtBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -292,5 +315,7 @@
         private System.Windows.Forms.TextBox zipTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TotalTxtBox;
     }
 }
