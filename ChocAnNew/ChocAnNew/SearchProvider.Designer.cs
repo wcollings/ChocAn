@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchProvider));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label streetLabel;
@@ -37,6 +36,7 @@
             System.Windows.Forms.Label stateLabel;
             System.Windows.Forms.Label zipLabel;
             System.Windows.Forms.Label emailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchProvider));
             this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.providersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProvidersTableAdapter();
@@ -87,6 +87,69 @@
             this.providersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(125, 142);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(23, 17);
+            idLabel.TabIndex = 13;
+            idLabel.Text = "Id:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(125, 105);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(49, 17);
+            nameLabel.TabIndex = 14;
+            nameLabel.Text = "Name:";
+            // 
+            // streetLabel
+            // 
+            streetLabel.AutoSize = true;
+            streetLabel.Location = new System.Drawing.Point(125, 180);
+            streetLabel.Name = "streetLabel";
+            streetLabel.Size = new System.Drawing.Size(50, 17);
+            streetLabel.TabIndex = 15;
+            streetLabel.Text = "Street:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(125, 228);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(35, 17);
+            cityLabel.TabIndex = 16;
+            cityLabel.Text = "City:";
+            // 
+            // stateLabel
+            // 
+            stateLabel.AutoSize = true;
+            stateLabel.Location = new System.Drawing.Point(125, 273);
+            stateLabel.Name = "stateLabel";
+            stateLabel.Size = new System.Drawing.Size(45, 17);
+            stateLabel.TabIndex = 17;
+            stateLabel.Text = "State:";
+            // 
+            // zipLabel
+            // 
+            zipLabel.AutoSize = true;
+            zipLabel.Location = new System.Drawing.Point(125, 312);
+            zipLabel.Name = "zipLabel";
+            zipLabel.Size = new System.Drawing.Size(32, 17);
+            zipLabel.TabIndex = 18;
+            zipLabel.Text = "Zip:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(124, 356);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(46, 17);
+            emailLabel.TabIndex = 19;
+            emailLabel.Text = "Email:";
             // 
             // databaseCADataSet
             // 
@@ -315,15 +378,6 @@
             this.searchProvText.Size = new System.Drawing.Size(141, 22);
             this.searchProvText.TabIndex = 13;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(125, 142);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(23, 17);
-            idLabel.TabIndex = 13;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Id", true));
@@ -331,15 +385,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(165, 22);
             this.idTextBox.TabIndex = 14;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(125, 105);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(49, 17);
-            nameLabel.TabIndex = 14;
-            nameLabel.Text = "Name:";
             // 
             // nameTextBox
             // 
@@ -349,15 +394,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(165, 22);
             this.nameTextBox.TabIndex = 15;
             // 
-            // streetLabel
-            // 
-            streetLabel.AutoSize = true;
-            streetLabel.Location = new System.Drawing.Point(125, 180);
-            streetLabel.Name = "streetLabel";
-            streetLabel.Size = new System.Drawing.Size(50, 17);
-            streetLabel.TabIndex = 15;
-            streetLabel.Text = "Street:";
-            // 
             // streetTextBox
             // 
             this.streetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Street", true));
@@ -365,15 +401,6 @@
             this.streetTextBox.Name = "streetTextBox";
             this.streetTextBox.Size = new System.Drawing.Size(165, 22);
             this.streetTextBox.TabIndex = 16;
-            // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(125, 228);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(35, 17);
-            cityLabel.TabIndex = 16;
-            cityLabel.Text = "City:";
             // 
             // cityTextBox
             // 
@@ -383,15 +410,6 @@
             this.cityTextBox.Size = new System.Drawing.Size(165, 22);
             this.cityTextBox.TabIndex = 17;
             // 
-            // stateLabel
-            // 
-            stateLabel.AutoSize = true;
-            stateLabel.Location = new System.Drawing.Point(125, 273);
-            stateLabel.Name = "stateLabel";
-            stateLabel.Size = new System.Drawing.Size(45, 17);
-            stateLabel.TabIndex = 17;
-            stateLabel.Text = "State:";
-            // 
             // stateTextBox
             // 
             this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "State", true));
@@ -400,15 +418,6 @@
             this.stateTextBox.Size = new System.Drawing.Size(165, 22);
             this.stateTextBox.TabIndex = 18;
             // 
-            // zipLabel
-            // 
-            zipLabel.AutoSize = true;
-            zipLabel.Location = new System.Drawing.Point(125, 312);
-            zipLabel.Name = "zipLabel";
-            zipLabel.Size = new System.Drawing.Size(32, 17);
-            zipLabel.TabIndex = 18;
-            zipLabel.Text = "Zip:";
-            // 
             // zipTextBox
             // 
             this.zipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Zip", true));
@@ -416,15 +425,6 @@
             this.zipTextBox.Name = "zipTextBox";
             this.zipTextBox.Size = new System.Drawing.Size(165, 22);
             this.zipTextBox.TabIndex = 19;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(124, 356);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(46, 17);
-            emailLabel.TabIndex = 19;
-            emailLabel.Text = "Email:";
             // 
             // emailTextBox
             // 
@@ -462,6 +462,7 @@
             this.DeleteProvBtn.TabIndex = 23;
             this.DeleteProvBtn.Text = "Delete Provider";
             this.DeleteProvBtn.UseVisualStyleBackColor = true;
+            this.DeleteProvBtn.Click += new System.EventHandler(this.DeleteProvBtn_Click);
             // 
             // SearchProvider
             // 
@@ -522,13 +523,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton providersBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView providersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Button SearchProviderBtn;
         private System.Windows.Forms.TextBox searchProvText;
         private System.Windows.Forms.TextBox idTextBox;
@@ -541,5 +535,12 @@
         private System.Windows.Forms.Button clearTxtBox;
         private System.Windows.Forms.Button UpdateProvBtn;
         private System.Windows.Forms.Button DeleteProvBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

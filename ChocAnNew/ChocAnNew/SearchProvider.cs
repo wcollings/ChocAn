@@ -20,6 +20,8 @@ namespace ChocAnNew
         public SearchProvider()
         {
             InitializeComponent();
+
+            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
         }
 
         private void SearchProvider_Load(object sender, EventArgs e)
@@ -28,6 +30,19 @@ namespace ChocAnNew
             this.providersTableAdapter.Fill(this.databaseCADataSet.Providers);
 
         }
+        public void loadProvidersTable()
+        {
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand("SELECT * from Providers", connectionSql))
+            {
+                connectionSql.Open();
+                SqlDataAdapter sda = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                providersDataGridView.DataSource = dt;
+            }
+        }
+
 
         private void providersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -70,8 +85,8 @@ namespace ChocAnNew
             state = this.stateTextBox.Text;
             zip = this.zipTextBox.Text;
 
-            String query = ("UPDATE Providers SET Name = @ProvidersName, @ProvidersStreet, @ProvidersCity, @ProvidersZip, @ProvidersEmail");
-            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
+            String query = ("UPDATE Providers SET Name = @ProvidersName, Street = @ProvidersStreet, City = @ProvidersCity, Zip = @ProvidersZip, Email = @ProvidersEmail WHERE Id = @ProvidersId");
+            //connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
             using (connectionSql = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connectionSql))
             {
@@ -82,20 +97,43 @@ namespace ChocAnNew
                 command.Parameters.AddWithValue("@ProvidersState", state);
                 command.Parameters.AddWithValue("@ProvidersZip", zip);
                 command.Parameters.AddWithValue("@ProvidersEmail", email);
-
-                try
-                {
-
-                    command.ExecuteNonQuery();
-                }
-                catch (System.Exception ex)
-                {
-
-                }
+                command.Parameters.AddWithValue("@ProvidersId", idTextBox.Text);
+                command.ExecuteNonQuery();
                
-
+                
                 MessageBox.Show("Successfully Updated");
+                loadProvidersTable();
             }
         }
+
+        private void DeleteProvBtn_Click(object sender, EventArgs e)
+        {
+            string query = "DELETE Providers where ID = @ProvidersId ";
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+                command.Parameters.AddWithValue("@ProvidersId", idTextBox.Text);
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully Deleted");
+                loadProvidersTable();
+
+            }
+        }
+
+        private void providersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            providersDataGridView.CurrentRow.Selected = true;
+            idTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].FormattedValue.ToString();
+            nameTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"].FormattedValue.ToString();
+            streetTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].FormattedValue.ToString();
+            cityTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].FormattedValue.ToString();
+            zipTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn5"].FormattedValue.ToString();
+            emailTextBox.Text = providersDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn6"].FormattedValue.ToString();   
+
+        }
+
+
     }
 }

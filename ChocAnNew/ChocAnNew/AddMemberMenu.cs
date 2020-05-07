@@ -38,14 +38,8 @@ namespace ChocAnNew
         private void AddMemberMenu_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'databaseCADataSet.Members' table. You can move, or remove it, as needed.
-            try {
 
                 this.membersTableAdapter.Fill(this.databaseCADataSet.Members);
-            }
-            catch (System.Exception ex)
-            {
-            
-            }
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
