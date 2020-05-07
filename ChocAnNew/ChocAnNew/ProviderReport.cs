@@ -47,9 +47,6 @@ namespace ChocAnNew
                 DataTable providerReportTable = new DataTable();
                 adapter.Fill(providerReportTable);
                 provGrid.DataSource= providerReportTable;
-                Object totalO;
-                totalO = providerReportTable.Compute("Sum(Fee)","");
-                TotalTxtBox.Text = totalO.ToString();
             }
         }
 

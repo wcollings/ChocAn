@@ -38,19 +38,17 @@
             System.Windows.Forms.Label emailLabel;
             this.provGrid = new System.Windows.Forms.DataGridView();
             this.idTextBox = new System.Windows.Forms.TextBox();
-            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.streetTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.zipTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProvidersTableAdapter();
             this.tableAdapterManager = new ChocAnNew.DatabaseCADataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TotalTxtBox = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             streetLabel = new System.Windows.Forms.Label();
@@ -63,76 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(27, 38);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(39, 29);
-            idLabel.TabIndex = 28;
-            idLabel.Text = "Id:";
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nameLabel.Location = new System.Drawing.Point(27, 70);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(84, 29);
-            nameLabel.TabIndex = 30;
-            nameLabel.Text = "Name:";
-            // 
-            // streetLabel
-            // 
-            streetLabel.AutoSize = true;
-            streetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            streetLabel.Location = new System.Drawing.Point(27, 102);
-            streetLabel.Name = "streetLabel";
-            streetLabel.Size = new System.Drawing.Size(83, 29);
-            streetLabel.TabIndex = 32;
-            streetLabel.Text = "Street:";
-            // 
-            // cityLabel
-            // 
-            cityLabel.AutoSize = true;
-            cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cityLabel.Location = new System.Drawing.Point(27, 134);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new System.Drawing.Size(59, 29);
-            cityLabel.TabIndex = 34;
-            cityLabel.Text = "City:";
-            // 
-            // stateLabel
-            // 
-            stateLabel.AutoSize = true;
-            stateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            stateLabel.Location = new System.Drawing.Point(27, 166);
-            stateLabel.Name = "stateLabel";
-            stateLabel.Size = new System.Drawing.Size(74, 29);
-            stateLabel.TabIndex = 36;
-            stateLabel.Text = "State:";
-            // 
-            // zipLabel
-            // 
-            zipLabel.AutoSize = true;
-            zipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            zipLabel.Location = new System.Drawing.Point(27, 198);
-            zipLabel.Name = "zipLabel";
-            zipLabel.Size = new System.Drawing.Size(53, 29);
-            zipLabel.TabIndex = 38;
-            zipLabel.Text = "Zip:";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emailLabel.Location = new System.Drawing.Point(27, 230);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(80, 29);
-            emailLabel.TabIndex = 40;
-            emailLabel.Text = "Email:";
-            // 
             // provGrid
             // 
             this.provGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -144,6 +72,16 @@
             this.provGrid.Size = new System.Drawing.Size(1008, 208);
             this.provGrid.TabIndex = 0;
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(27, 38);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(39, 29);
+            idLabel.TabIndex = 28;
+            idLabel.Text = "Id:";
+            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Id", true));
@@ -154,15 +92,15 @@
             this.idTextBox.Size = new System.Drawing.Size(276, 35);
             this.idTextBox.TabIndex = 29;
             // 
-            // providersBindingSource
+            // nameLabel
             // 
-            this.providersBindingSource.DataMember = "Providers";
-            this.providersBindingSource.DataSource = this.databaseCADataSet;
-            // 
-            // databaseCADataSet
-            // 
-            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
-            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nameLabel.Location = new System.Drawing.Point(27, 70);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(84, 29);
+            nameLabel.TabIndex = 30;
+            nameLabel.Text = "Name:";
             // 
             // nameTextBox
             // 
@@ -174,6 +112,16 @@
             this.nameTextBox.Size = new System.Drawing.Size(276, 35);
             this.nameTextBox.TabIndex = 31;
             // 
+            // streetLabel
+            // 
+            streetLabel.AutoSize = true;
+            streetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            streetLabel.Location = new System.Drawing.Point(27, 102);
+            streetLabel.Name = "streetLabel";
+            streetLabel.Size = new System.Drawing.Size(83, 29);
+            streetLabel.TabIndex = 32;
+            streetLabel.Text = "Street:";
+            // 
             // streetTextBox
             // 
             this.streetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Street", true));
@@ -183,6 +131,16 @@
             this.streetTextBox.ReadOnly = true;
             this.streetTextBox.Size = new System.Drawing.Size(276, 35);
             this.streetTextBox.TabIndex = 33;
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cityLabel.Location = new System.Drawing.Point(27, 134);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(59, 29);
+            cityLabel.TabIndex = 34;
+            cityLabel.Text = "City:";
             // 
             // cityTextBox
             // 
@@ -194,6 +152,16 @@
             this.cityTextBox.Size = new System.Drawing.Size(276, 35);
             this.cityTextBox.TabIndex = 35;
             // 
+            // stateLabel
+            // 
+            stateLabel.AutoSize = true;
+            stateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            stateLabel.Location = new System.Drawing.Point(27, 166);
+            stateLabel.Name = "stateLabel";
+            stateLabel.Size = new System.Drawing.Size(74, 29);
+            stateLabel.TabIndex = 36;
+            stateLabel.Text = "State:";
+            // 
             // stateTextBox
             // 
             this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "State", true));
@@ -203,6 +171,16 @@
             this.stateTextBox.ReadOnly = true;
             this.stateTextBox.Size = new System.Drawing.Size(276, 35);
             this.stateTextBox.TabIndex = 37;
+            // 
+            // zipLabel
+            // 
+            zipLabel.AutoSize = true;
+            zipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            zipLabel.Location = new System.Drawing.Point(27, 198);
+            zipLabel.Name = "zipLabel";
+            zipLabel.Size = new System.Drawing.Size(53, 29);
+            zipLabel.TabIndex = 38;
+            zipLabel.Text = "Zip:";
             // 
             // zipTextBox
             // 
@@ -214,6 +192,16 @@
             this.zipTextBox.Size = new System.Drawing.Size(276, 35);
             this.zipTextBox.TabIndex = 39;
             // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.Location = new System.Drawing.Point(27, 230);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(80, 29);
+            emailLabel.TabIndex = 40;
+            emailLabel.Text = "Email:";
+            // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Email", true));
@@ -223,6 +211,16 @@
             this.emailTextBox.ReadOnly = true;
             this.emailTextBox.Size = new System.Drawing.Size(276, 35);
             this.emailTextBox.TabIndex = 41;
+            // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataMember = "Providers";
+            this.providersBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // databaseCADataSet
+            // 
+            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
+            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // providersTableAdapter
             // 
@@ -247,32 +245,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 534);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 26);
-            this.label1.TabIndex = 43;
-            this.label1.Text = "Total fees";
-            // 
-            // TotalTxtBox
-            // 
-            this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTxtBox.Location = new System.Drawing.Point(141, 534);
-            this.TotalTxtBox.Name = "TotalTxtBox";
-            this.TotalTxtBox.ReadOnly = true;
-            this.TotalTxtBox.Size = new System.Drawing.Size(228, 32);
-            this.TotalTxtBox.TabIndex = 44;
-            // 
             // ProviderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1069, 602);
-            this.Controls.Add(this.TotalTxtBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
@@ -315,7 +292,5 @@
         private System.Windows.Forms.TextBox zipTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TotalTxtBox;
     }
 }

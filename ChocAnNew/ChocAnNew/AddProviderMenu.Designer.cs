@@ -49,19 +49,17 @@
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.Location = new System.Drawing.Point(47, 25);
-            this.nameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLbl.Location = new System.Drawing.Point(35, 20);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(64, 25);
+            this.nameLbl.Size = new System.Drawing.Size(51, 20);
             this.nameLbl.TabIndex = 0;
             this.nameLbl.Text = "Name";
             // 
             // nameTxtBox
             // 
-            this.nameTxtBox.Location = new System.Drawing.Point(123, 25);
-            this.nameTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameTxtBox.Location = new System.Drawing.Point(92, 20);
             this.nameTxtBox.Name = "nameTxtBox";
-            this.nameTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.nameTxtBox.Size = new System.Drawing.Size(199, 20);
             this.nameTxtBox.TabIndex = 1;
             this.nameTxtBox.Text = "";
             // 
@@ -69,19 +67,17 @@
             // 
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLbl.Location = new System.Drawing.Point(47, 57);
-            this.emailLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLbl.Location = new System.Drawing.Point(35, 46);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(60, 25);
+            this.emailLbl.Size = new System.Drawing.Size(48, 20);
             this.emailLbl.TabIndex = 2;
             this.emailLbl.Text = "Email";
             // 
             // emailTxtBox
             // 
-            this.emailTxtBox.Location = new System.Drawing.Point(123, 57);
-            this.emailTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailTxtBox.Location = new System.Drawing.Point(92, 46);
             this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.emailTxtBox.Size = new System.Drawing.Size(199, 20);
             this.emailTxtBox.TabIndex = 3;
             this.emailTxtBox.Text = "";
             // 
@@ -89,28 +85,25 @@
             // 
             this.addressLbl.AutoSize = true;
             this.addressLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLbl.Location = new System.Drawing.Point(24, 89);
-            this.addressLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addressLbl.Location = new System.Drawing.Point(18, 72);
             this.addressLbl.Name = "addressLbl";
-            this.addressLbl.Size = new System.Drawing.Size(85, 25);
+            this.addressLbl.Size = new System.Drawing.Size(68, 20);
             this.addressLbl.TabIndex = 4;
             this.addressLbl.Text = "Address";
             // 
             // addressTxtBox
             // 
-            this.addressTxtBox.Location = new System.Drawing.Point(123, 89);
-            this.addressTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressTxtBox.Location = new System.Drawing.Point(92, 72);
             this.addressTxtBox.Name = "addressTxtBox";
-            this.addressTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.addressTxtBox.Size = new System.Drawing.Size(199, 20);
             this.addressTxtBox.TabIndex = 5;
             this.addressTxtBox.Text = "";
             // 
             // cityTxtBox
             // 
-            this.cityTxtBox.Location = new System.Drawing.Point(123, 121);
-            this.cityTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cityTxtBox.Location = new System.Drawing.Point(92, 98);
             this.cityTxtBox.Name = "cityTxtBox";
-            this.cityTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.cityTxtBox.Size = new System.Drawing.Size(199, 20);
             this.cityTxtBox.TabIndex = 7;
             this.cityTxtBox.Text = "";
             // 
@@ -118,19 +111,17 @@
             // 
             this.cityLbl.AutoSize = true;
             this.cityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityLbl.Location = new System.Drawing.Point(64, 121);
-            this.cityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cityLbl.Location = new System.Drawing.Point(48, 98);
             this.cityLbl.Name = "cityLbl";
-            this.cityLbl.Size = new System.Drawing.Size(46, 25);
+            this.cityLbl.Size = new System.Drawing.Size(35, 20);
             this.cityLbl.TabIndex = 6;
             this.cityLbl.Text = "City";
             // 
             // stateTxtBox
             // 
-            this.stateTxtBox.Location = new System.Drawing.Point(123, 153);
-            this.stateTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stateTxtBox.Location = new System.Drawing.Point(92, 124);
             this.stateTxtBox.Name = "stateTxtBox";
-            this.stateTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.stateTxtBox.Size = new System.Drawing.Size(199, 20);
             this.stateTxtBox.TabIndex = 9;
             this.stateTxtBox.Text = "";
             // 
@@ -138,20 +129,18 @@
             // 
             this.stateLbl.AutoSize = true;
             this.stateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stateLbl.Location = new System.Drawing.Point(47, 153);
-            this.stateLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.stateLbl.Location = new System.Drawing.Point(35, 124);
             this.stateLbl.Name = "stateLbl";
-            this.stateLbl.Size = new System.Drawing.Size(58, 25);
+            this.stateLbl.Size = new System.Drawing.Size(48, 20);
             this.stateLbl.TabIndex = 8;
             this.stateLbl.Text = "State";
             // 
             // submitBtn
             // 
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitBtn.Location = new System.Drawing.Point(123, 217);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.submitBtn.Location = new System.Drawing.Point(92, 176);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(131, 42);
+            this.submitBtn.Size = new System.Drawing.Size(98, 34);
             this.submitBtn.TabIndex = 10;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
@@ -159,21 +148,18 @@
             // cancelBtn
             // 
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(257, 217);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelBtn.Location = new System.Drawing.Point(193, 176);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(131, 42);
+            this.cancelBtn.Size = new System.Drawing.Size(98, 34);
             this.cancelBtn.TabIndex = 11;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // zipTxtBox
             // 
-            this.zipTxtBox.Location = new System.Drawing.Point(123, 185);
-            this.zipTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.zipTxtBox.Location = new System.Drawing.Point(92, 150);
             this.zipTxtBox.Name = "zipTxtBox";
-            this.zipTxtBox.Size = new System.Drawing.Size(264, 24);
+            this.zipTxtBox.Size = new System.Drawing.Size(199, 20);
             this.zipTxtBox.TabIndex = 12;
             this.zipTxtBox.Text = "";
             // 
@@ -181,18 +167,17 @@
             // 
             this.zipLbl.AutoSize = true;
             this.zipLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zipLbl.Location = new System.Drawing.Point(13, 185);
-            this.zipLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.zipLbl.Location = new System.Drawing.Point(10, 150);
             this.zipLbl.Name = "zipLbl";
-            this.zipLbl.Size = new System.Drawing.Size(92, 25);
+            this.zipLbl.Size = new System.Drawing.Size(73, 20);
             this.zipLbl.TabIndex = 13;
             this.zipLbl.Text = "Zip Code";
             // 
             // AddProviderMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 283);
+            this.ClientSize = new System.Drawing.Size(320, 230);
             this.Controls.Add(this.zipLbl);
             this.Controls.Add(this.zipTxtBox);
             this.Controls.Add(this.cancelBtn);
@@ -207,7 +192,6 @@
             this.Controls.Add(this.emailLbl);
             this.Controls.Add(this.nameTxtBox);
             this.Controls.Add(this.nameLbl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddProviderMenu";
             this.Text = "Add Provider Menu";
             this.ResumeLayout(false);

@@ -20,7 +20,7 @@ namespace ChocAnNew
 
         private void addMemBtn_Click(object sender, EventArgs e)
         {
-            AddMemberMenu add = new AddMemberMenu();// modify is going to need something in the loading to get the menu.
+            MemberRecords add = new MemberRecords();// modify is going to need something in the loading to get the menu.
             add.Show();
         }
 
@@ -46,7 +46,7 @@ namespace ChocAnNew
         private void modProBtn_Click(object sender, EventArgs e)
         {
             //Search search = new Search("modify provider");
-            SearchProvider search_provider = new SearchProvider();
+            ProviderRecords search_provider = new ProviderRecords();
             search_provider.Show();
             //search.Show();
         }
@@ -65,8 +65,8 @@ namespace ChocAnNew
 
         private void accProDirBtn_Click(object sender, EventArgs e)
         {
-            MainMenuProvider viewProv = new MainMenuProvider();
-            viewProv.Show();
+            ViewProviderDirectory viewProDir = new ViewProviderDirectory();
+            viewProDir.Show();
         }
 
         private void genManRepBtn_Click(object sender, EventArgs e)
@@ -74,9 +74,10 @@ namespace ChocAnNew
             //This is where we need to put the logic to send the Manager Report
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void modMemberRecs_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ModifyMemberRecords mod = new ModifyMemberRecords();
+            mod.Show();
         }
     }
 }

@@ -130,9 +130,5 @@ namespace ChocAnNew
             }
         }
 
-        private void search_cancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

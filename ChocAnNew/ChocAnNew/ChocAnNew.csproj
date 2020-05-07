@@ -62,11 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMemberMenu.cs">
+    <Compile Include="MemberRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMemberMenu.designer.cs">
-      <DependentUpon>AddMemberMenu.cs</DependentUpon>
+    <Compile Include="MemberRecords.designer.cs">
+      <DependentUpon>MemberRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="AddProviderMenu.cs">
       <SubType>Form</SubType>
@@ -124,6 +124,12 @@
     <Compile Include="ModifyMemberMenu.Designer.cs">
       <DependentUpon>ModifyMemberMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyMemberRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyMemberRecords.Designer.cs">
+      <DependentUpon>ModifyMemberRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifyProviderDirectory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,11 +162,11 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="SearchProvider.cs">
+    <Compile Include="ProviderRecords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SearchProvider.Designer.cs">
-      <DependentUpon>SearchProvider.cs</DependentUpon>
+    <Compile Include="ProviderRecords.Designer.cs">
+      <DependentUpon>ProviderRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="viewMember.cs">
       <SubType>Form</SubType>
@@ -174,8 +180,8 @@
     <Compile Include="ViewProviderDirectory.Designer.cs">
       <DependentUpon>ViewProviderDirectory.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddMemberMenu.resx">
-      <DependentUpon>AddMemberMenu.cs</DependentUpon>
+    <EmbeddedResource Include="MemberRecords.resx">
+      <DependentUpon>MemberRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProviderMenu.resx">
       <DependentUpon>AddProviderMenu.cs</DependentUpon>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="ModifyMemberMenu.resx">
       <DependentUpon>ModifyMemberMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyMemberRecords.resx">
+      <DependentUpon>ModifyMemberRecords.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifyProviderDirectory.resx">
       <DependentUpon>ModifyProviderDirectory.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,8 +234,8 @@
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SearchProvider.resx">
-      <DependentUpon>SearchProvider.cs</DependentUpon>
+    <EmbeddedResource Include="ProviderRecords.resx">
+      <DependentUpon>ProviderRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewMember.resx">
       <DependentUpon>viewMember.cs</DependentUpon>
@@ -272,10 +281,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DatabaseCA.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DatabaseCA_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DatabaseCA.mdf</DependentUpon>
     </Content>
   </ItemGroup>

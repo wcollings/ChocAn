@@ -31,9 +31,9 @@ namespace ChocAnNew
             using (SqlCommand command = new SqlCommand(query, connectionSql))
             {
                 connectionSql.Open();
-                command.Parameters.AddWithValue("@p", ProvComboBox.SelectedValue);
-                command.Parameters.AddWithValue("@m", meMcomboBox.SelectedValue);
-                command.Parameters.AddWithValue("@code", serCodeComboBox.SelectedValue);
+                command.Parameters.AddWithValue("@p", Int32.Parse(proIDTxtBox.Text));
+                command.Parameters.AddWithValue("@m", Int32.Parse(memIDTxtBox.Text));
+                command.Parameters.AddWithValue("@code", Int32.Parse(servCodeTxtBox.Text));
                 command.Parameters.AddWithValue("@current", DateTime.Now);
                 command.Parameters.AddWithValue("@date", dateTimePicker1.Value);
                 command.Parameters.AddWithValue("@comment", commentsTxtBox.Text);
@@ -54,19 +54,6 @@ namespace ChocAnNew
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void ReportServicesMenu_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'databaseCADataSet.ProviderDirectory' table. You can move, or remove it, as needed.
-            this.providerDirectoryTableAdapter.Fill(this.databaseCADataSet.ProviderDirectory);
-            // TODO: This line of code loads data into the 'databaseCADataSet.Members' table. You can move, or remove it, as needed.
-            this.membersTableAdapter.Fill(this.databaseCADataSet.Members);
-            // TODO: This line of code loads data into the 'databaseCADataSet.ServiceRecord' table. You can move, or remove it, as needed.
-            this.serviceRecordTableAdapter.Fill(this.databaseCADataSet.ServiceRecord);
-            // TODO: This line of code loads data into the 'databaseCADataSet.Providers' table. You can move, or remove it, as needed.
-            this.providersTableAdapter.Fill(this.databaseCADataSet.Providers);
-
         }
     }
 }

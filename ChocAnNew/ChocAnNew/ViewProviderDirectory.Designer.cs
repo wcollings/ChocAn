@@ -36,8 +36,8 @@
             this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
-            this.Cancel = new System.Windows.Forms.Button();
             this.UpdateProviderDir = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
@@ -52,37 +52,30 @@
             this.serviceNameDataGridViewTextBoxColumn,
             this.feeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.providerDirectoryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 13);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 245);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // serviceNameDataGridViewTextBoxColumn
             // 
             this.serviceNameDataGridViewTextBoxColumn.DataPropertyName = "ServiceName";
             this.serviceNameDataGridViewTextBoxColumn.HeaderText = "ServiceName";
-            this.serviceNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.serviceNameDataGridViewTextBoxColumn.Name = "serviceNameDataGridViewTextBoxColumn";
-            this.serviceNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // feeDataGridViewTextBoxColumn
             // 
             this.feeDataGridViewTextBoxColumn.DataPropertyName = "Fee";
             this.feeDataGridViewTextBoxColumn.HeaderText = "Fee";
-            this.feeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.feeDataGridViewTextBoxColumn.Name = "feeDataGridViewTextBoxColumn";
-            this.feeDataGridViewTextBoxColumn.Width = 125;
             // 
             // providerDirectoryBindingSource
             // 
@@ -98,20 +91,9 @@
             // 
             this.providerDirectoryTableAdapter.ClearBeforeFill = true;
             // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(393, 332);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(135, 49);
-            this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
             // UpdateProviderDir
             // 
-            this.UpdateProviderDir.Location = new System.Drawing.Point(12, 332);
+            this.UpdateProviderDir.Location = new System.Drawing.Point(12, 333);
             this.UpdateProviderDir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UpdateProviderDir.Name = "UpdateProviderDir";
             this.UpdateProviderDir.Size = new System.Drawing.Size(172, 50);
@@ -120,11 +102,21 @@
             this.UpdateProviderDir.UseVisualStyleBackColor = true;
             this.UpdateProviderDir.Click += new System.EventHandler(this.UpdateProviderDir_Click);
             // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(420, 324);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(135, 49);
+            this.Cancel.TabIndex = 2;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            // 
             // ViewProviderDirectory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 403);
+            this.ClientSize = new System.Drawing.Size(619, 485);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.UpdateProviderDir);
             this.Controls.Add(this.dataGridView1);
@@ -148,7 +140,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn feeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.Button UpdateProviderDir;
+        private System.Windows.Forms.Button Cancel;
     }
 }
