@@ -1,5 +1,4 @@
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csprojAssemblyReference.cache
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AddMemberMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AddProviderMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.DeleteMemberMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.DeleteProviderMenu.resources
@@ -13,13 +12,10 @@ C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\Ch
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.Properties.Resources.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ReportServicesMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.Search.resources
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.SearchProvider.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.viewMember.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ViewProviderDirectory.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csproj.GenerateResource.cache
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csproj.CoreCompileInputs.cache
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\Database1.mdf
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\Database1_log.ldf
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.exe.config
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.exe
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.pdb
@@ -55,3 +51,8 @@ C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.exe.config
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.exe
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.pdb
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csprojAssemblyReference.cache
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MemberRecords.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyMemberRecords.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderRecords.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA.mdf
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA_log.ldf
