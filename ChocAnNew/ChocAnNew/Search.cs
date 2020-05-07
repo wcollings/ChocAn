@@ -83,10 +83,12 @@ namespace ChocAnNew
                         {
                             if (reader.GetBoolean(1) == true) {
                                 MessageBox.Show(String.Format("{0} is validated!", reader.GetString(0)));
+                                this.Close();
                             }
                             else
                             {
                                 MessageBox.Show(String.Format("{0} is Suspended!", reader.GetString(0)));
+                                this.Close();
                             }
                         }
                     }
@@ -116,6 +118,7 @@ namespace ChocAnNew
                         {
                             ProviderReport providerReport = new ProviderReport(reader.GetInt32(0));
                             providerReport.Show();
+                            this.Close();
                         }
                     }
                     else
