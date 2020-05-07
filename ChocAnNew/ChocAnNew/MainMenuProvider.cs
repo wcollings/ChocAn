@@ -28,6 +28,7 @@ namespace ChocAnNew
         {
             ReportServicesMenu report = new ReportServicesMenu();
             report.Show();
+           
         }
 
         private void accProDirBtn_Click(object sender, EventArgs e)
