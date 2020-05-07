@@ -52,3 +52,4 @@ C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\Ch
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.pdb
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.exe
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.pdb
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderReport.resources

@@ -16,13 +16,13 @@ namespace ChocAnNew
     public partial class Search : Form
     {
         string choice;
-        string connectionString; //This is the database configuration location
+        string connectionString;
         SqlConnection connectionSql;
         public Search(string sentChoice)
         {
             InitializeComponent();
             choice = sentChoice;
-
+            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
@@ -48,9 +48,10 @@ namespace ChocAnNew
                     delPro.Show();
                     break;
                 case "view member":
-                    viewMember viewMem = new viewMember();
                     searchMemberById();
-                    //viewMem.Show();
+                    break;
+                case "provider id":
+                    searchProviderById();
                     break;
             }
         }
@@ -69,7 +70,6 @@ namespace ChocAnNew
         private void searchMemberById()
         {
             String query = ("SELECT Name, Status, Reason FROM Members WHERE Id=@id");
-            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
             using (connectionSql = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connectionSql))
             {
@@ -98,5 +98,34 @@ namespace ChocAnNew
                 }
             }
         }
+
+
+        private void searchProviderById()
+        {
+            String query = ("SELECT Id FROM Providers WHERE Id=@id");
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+                command.Parameters.AddWithValue("@id", Int32.Parse(searchTxtBox.Text));
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ProviderReport providerReport = new ProviderReport(reader.GetInt32(0));
+                            providerReport.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Provider Id");
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
     }
 }

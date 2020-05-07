@@ -15,7 +15,7 @@ namespace ChocAnNew
     public partial class ReportServicesMenu : Form
 
     {
-        string connectionString; //This is the database configuration location
+        string connectionString;
         SqlConnection connectionSql;
 
         public ReportServicesMenu()
@@ -41,12 +41,19 @@ namespace ChocAnNew
                 try
                 {
                     command.ExecuteNonQuery();
+                    MessageBox.Show("Recored Added!", "Added", MessageBoxButtons.OK);
+                    this.Close();
                 }
                 catch (System.Exception ex)
                 {
                     MessageBox.Show(ex.Message,"Invalid Input", MessageBoxButtons.OK);
                 }
             }
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

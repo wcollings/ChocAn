@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
-            this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
+            this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
             this.UpdateProviderDir = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -52,25 +52,12 @@
             this.serviceNameDataGridViewTextBoxColumn,
             this.feeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.providerDirectoryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(203, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 13);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 245);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // databaseCADataSet
-            // 
-            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
-            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // providerDirectoryBindingSource
-            // 
-            this.providerDirectoryBindingSource.DataMember = "ProviderDirectory";
-            this.providerDirectoryBindingSource.DataSource = this.databaseCADataSet;
-            // 
-            // providerDirectoryTableAdapter
-            // 
-            this.providerDirectoryTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -90,11 +77,26 @@
             this.feeDataGridViewTextBoxColumn.HeaderText = "Fee";
             this.feeDataGridViewTextBoxColumn.Name = "feeDataGridViewTextBoxColumn";
             // 
+            // providerDirectoryBindingSource
+            // 
+            this.providerDirectoryBindingSource.DataMember = "ProviderDirectory";
+            this.providerDirectoryBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // databaseCADataSet
+            // 
+            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
+            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // providerDirectoryTableAdapter
+            // 
+            this.providerDirectoryTableAdapter.ClearBeforeFill = true;
+            // 
             // UpdateProviderDir
             // 
-            this.UpdateProviderDir.Location = new System.Drawing.Point(256, 276);
+            this.UpdateProviderDir.Location = new System.Drawing.Point(12, 333);
+            this.UpdateProviderDir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UpdateProviderDir.Name = "UpdateProviderDir";
-            this.UpdateProviderDir.Size = new System.Drawing.Size(153, 40);
+            this.UpdateProviderDir.Size = new System.Drawing.Size(172, 50);
             this.UpdateProviderDir.TabIndex = 1;
             this.UpdateProviderDir.Text = "Modify Directory";
             this.UpdateProviderDir.UseVisualStyleBackColor = true;
@@ -102,28 +104,29 @@
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(513, 276);
+            this.Cancel.Location = new System.Drawing.Point(420, 324);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(120, 39);
+            this.Cancel.Size = new System.Drawing.Size(135, 49);
             this.Cancel.TabIndex = 2;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
             // 
             // ViewProviderDirectory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(619, 485);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.UpdateProviderDir);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewProviderDirectory";
             this.Text = "View Provider Directory";
             this.Load += new System.EventHandler(this.ViewProviderDirectory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -39,7 +39,8 @@ namespace ChocAnNew
 
         private void genProRptBtn_Click(object sender, EventArgs e)
         {
-            //This is where we generate the provider report.
+            Search search = new Search("provider id");
+            search.Show();
         }
     }
 }
