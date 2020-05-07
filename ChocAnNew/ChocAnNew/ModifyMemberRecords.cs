@@ -142,5 +142,36 @@ namespace ChocAnNew
             commentMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["reasonDataGridViewTextBoxColumn"].FormattedValue.ToString();
             emailMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["emailDataGridViewTextBoxColumn"].FormattedValue.ToString();
         }
+
+        private void addMemBtn_Click(object sender, EventArgs e)
+        {
+            string email, address, name, city, state, zip;
+
+            //Initialize
+            name = this.nameMemberTextBox.Text;
+            email = this.emailMemberTextBox.Text;
+            address = this.streetMemberTextBox.Text;
+            city = this.cityMemberTextBox.Text;
+            state = this.stateMemberTextBox.Text;
+            zip = this.zipMemberTextBox.Text;
+
+            string query = "INSERT INTO Members(Name, Street, City, State, Zip, Email) VALUES (@MembersName, @MembersStreet, @MembersCity, @MembersState, @MembersZip, @MembersEmail)";
+
+            using (connectionSql = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            {
+                connectionSql.Open();
+                command.Parameters.AddWithValue("@MembersName", name);
+                command.Parameters.AddWithValue("@MembersStreet", address);
+                command.Parameters.AddWithValue("@MembersCity", city);
+                command.Parameters.AddWithValue("@MembersState", state);
+                command.Parameters.AddWithValue("@MembersZip", zip);
+                command.Parameters.AddWithValue("@MembersEmail", email);
+                command.ExecuteScalar();
+
+                MessageBox.Show("Member Added");
+                loadMembersTable();
+            }
+        }
     }
 }

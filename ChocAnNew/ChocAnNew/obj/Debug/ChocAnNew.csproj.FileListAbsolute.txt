@@ -56,3 +56,27 @@ C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\Ch
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderRecords.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA.mdf
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA_log.ldf
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csprojAssemblyReference.cache
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MemberRecords.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AddProviderMenu.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainForm.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuAdmin.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuProvider.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyMemberRecords.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyProviderDirectory.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyProviderMenu.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.Properties.Resources.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderReport.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ReportServicesMenu.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.Search.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderRecords.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.viewMember.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ViewProviderDirectory.resources
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csproj.GenerateResource.cache
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA.mdf
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA_log.ldf
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.exe.config
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.exe
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.pdb
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.exe
+D:\Sandbox\git\ChocAn\ChocAnNew\ChocAnNew\ChocAnNew.pdb

@@ -29,23 +29,9 @@ namespace ChocAnNew
         {
             switch (choice)
             {
-                case "modify user":
-                    //Below needs to be modified to take take from the database and put in the reason, validated bool, and ID number
-                    ModifyMemberMenu modMem = new ModifyMemberMenu("This is a reason", true, this.searchTxtBox.Text);
-                    modMem.Show();
-                    break;
-                case "delete user":
-                    //Again, we're going to have to modify the below class and do the same thing as modifying the user.
-                    DeleteMemberMenu delMem = new DeleteMemberMenu();
-                    delMem.Show();
-                    break;
                 case "modify provider":
                     ModifyProviderMenu modPro = new ModifyProviderMenu();
                     modPro.Show();
-                    break;
-                case "delete provider":
-                    DeleteProviderMenu delPro = new DeleteProviderMenu();
-                    delPro.Show();
                     break;
                 case "view member":
                     searchMemberById();

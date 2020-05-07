@@ -82,24 +82,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DeleteMemberMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteMemberMenu.Designer.cs">
-      <DependentUpon>DeleteMemberMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteProviderMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteProviderMenu.Designer.cs">
-      <DependentUpon>DeleteProviderMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formtest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formtest.Designer.cs">
-      <DependentUpon>Formtest.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +99,6 @@
     </Compile>
     <Compile Include="MainMenuProvider.Designer.cs">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModifyMemberMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModifyMemberMenu.Designer.cs">
-      <DependentUpon>ModifyMemberMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ModifyMemberRecords.cs">
       <SubType>Form</SubType>
@@ -186,15 +162,6 @@
     <EmbeddedResource Include="AddProviderMenu.resx">
       <DependentUpon>AddProviderMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteMemberMenu.resx">
-      <DependentUpon>DeleteMemberMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteProviderMenu.resx">
-      <DependentUpon>DeleteProviderMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formtest.resx">
-      <DependentUpon>Formtest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuProvider.resx">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModifyMemberMenu.resx">
-      <DependentUpon>ModifyMemberMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyMemberRecords.resx">
       <DependentUpon>ModifyMemberRecords.cs</DependentUpon>
