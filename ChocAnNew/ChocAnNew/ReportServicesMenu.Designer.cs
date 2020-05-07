@@ -39,25 +39,25 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ProvComboBox = new System.Windows.Forms.ComboBox();
-            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProvidersTableAdapter();
             this.providersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.providersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.meMcomboBox = new System.Windows.Forms.ComboBox();
+            this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKServiceProvidersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceRecordTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ServiceRecordTableAdapter();
-            this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.membersTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.MembersTableAdapter();
             this.serCodeComboBox = new System.Windows.Forms.ComboBox();
             this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,15 +167,15 @@
             this.ProvComboBox.TabIndex = 13;
             this.ProvComboBox.ValueMember = "Id";
             // 
-            // databaseCADataSet
-            // 
-            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
-            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // providersBindingSource
             // 
             this.providersBindingSource.DataMember = "Providers";
             this.providersBindingSource.DataSource = this.databaseCADataSet;
+            // 
+            // databaseCADataSet
+            // 
+            this.databaseCADataSet.DataSetName = "DatabaseCADataSet";
+            this.databaseCADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // providersTableAdapter
             // 
@@ -202,6 +202,11 @@
             this.meMcomboBox.TabIndex = 14;
             this.meMcomboBox.ValueMember = "Id";
             // 
+            // membersBindingSource
+            // 
+            this.membersBindingSource.DataMember = "Members";
+            this.membersBindingSource.DataSource = this.databaseCADataSet;
+            // 
             // fKServiceProvidersBindingSource
             // 
             this.fKServiceProvidersBindingSource.DataMember = "FK_Service_Providers";
@@ -210,11 +215,6 @@
             // serviceRecordTableAdapter
             // 
             this.serviceRecordTableAdapter.ClearBeforeFill = true;
-            // 
-            // membersBindingSource
-            // 
-            this.membersBindingSource.DataMember = "Members";
-            this.membersBindingSource.DataSource = this.databaseCADataSet;
             // 
             // membersTableAdapter
             // 
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 371);
+            this.ClientSize = new System.Drawing.Size(571, 365);
             this.Controls.Add(this.serCodeComboBox);
             this.Controls.Add(this.meMcomboBox);
             this.Controls.Add(this.ProvComboBox);
@@ -261,12 +261,12 @@
             this.Name = "ReportServicesMenu";
             this.Text = "Report Service";
             this.Load += new System.EventHandler(this.ReportServicesMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseCADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKServiceProvidersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

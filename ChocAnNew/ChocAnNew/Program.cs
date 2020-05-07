@@ -16,7 +16,7 @@ namespace ChocAnNew
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenuAdmin());
+            Application.Run(new MainForm());
         }
     }
 }
