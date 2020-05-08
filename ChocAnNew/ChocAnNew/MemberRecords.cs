@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace ChocAnNew
 {
@@ -57,7 +58,7 @@ namespace ChocAnNew
         private void addMember_Click(object sender, EventArgs e)
         {
             string email, address, name, city, state, zip;
-
+            bool add = true;
             //Initialize
             name = this.nameTxtBox.Text;
             email = this.emailTxtBox.Text;
@@ -66,22 +67,62 @@ namespace ChocAnNew
             state = this.stateTxtBox.Text;
             zip = this.zipTxtBox.Text;
 
-            string query = "INSERT INTO Members(Name, Street, City, State, Zip, Email) VALUES (@MembersName, @MembersStreet, @MembersCity, @MembersState, @MembersZip, @MembersEmail)";
+            System.Text.RegularExpressions.Regex nameCheck = new System.Text.RegularExpressions.Regex(@"[^0-9]");
+            System.Text.RegularExpressions.Regex emailCheck = new System.Text.RegularExpressions.Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            System.Text.RegularExpressions.Regex addressCheck = new System.Text.RegularExpressions.Regex(@"\d+ \w*.? ?[A-Za-z0-9 ]+");
+            System.Text.RegularExpressions.Regex cityCheck = new System.Text.RegularExpressions.Regex(@"\w+");
+            System.Text.RegularExpressions.Regex stateCheck = new System.Text.RegularExpressions.Regex(@"\w+");
+            System.Text.RegularExpressions.Regex zipCheck = new System.Text.RegularExpressions.Regex(@"\d{5}(-\d{3,7})?");
 
-            using (connectionSql = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connectionSql))
+            if (!nameCheck.IsMatch(name))
             {
-                connectionSql.Open();
-                command.Parameters.AddWithValue("@MembersName", name);
-                command.Parameters.AddWithValue("@MembersStreet", address);
-                command.Parameters.AddWithValue("@MembersCity", city);
-                command.Parameters.AddWithValue("@MembersState", state);
-                command.Parameters.AddWithValue("@MembersZip", zip);
-                command.Parameters.AddWithValue("@MembersEmail", email);
-                command.ExecuteScalar();
+                MessageBox.Show("Name is not valid. Please Try again");
+                add = false;
+            }
+            if (!emailCheck.IsMatch(email))
+            {
+                MessageBox.Show("Email is not valid. Please try again");
+                add = false;
+            }
+            if (!addressCheck.IsMatch(address))
+            {
+                MessageBox.Show("Address is not valid. PLease try again");
+                add = false;
+            }
+            if (!cityCheck.IsMatch(city))
+            {
+                MessageBox.Show("City is not valid. PLease try again");
+                add = false;
+            }
+            if (!stateCheck.IsMatch(state))
+            {
+                MessageBox.Show("State is not Valid. Please try again");
+                add = false;
+            }
+            if (!zipCheck.IsMatch(zip))
+            {
+                MessageBox.Show("Zip code is not valid. Please try again");
+                add = false;
+            }    
+            if (add)
+            {
+                string query = "INSERT INTO Members(Name, Street, City, State, Zip, Email) VALUES (@MembersName, @MembersStreet, @MembersCity, @MembersState, @MembersZip, @MembersEmail)";
 
-                MessageBox.Show("Member Added");
-                loadMembersTable();
+                using (connectionSql = new SqlConnection(connectionString))
+                using (SqlCommand command = new SqlCommand(query, connectionSql))
+                {
+                    connectionSql.Open();
+                    command.Parameters.AddWithValue("@MembersName", name);
+                    command.Parameters.AddWithValue("@MembersStreet", address);
+                    command.Parameters.AddWithValue("@MembersCity", city);
+                    command.Parameters.AddWithValue("@MembersState", state);
+                    command.Parameters.AddWithValue("@MembersZip", zip);
+                    command.Parameters.AddWithValue("@MembersEmail", email);
+                    command.ExecuteScalar();
+
+                    MessageBox.Show("Member Added");
+                    loadMembersTable();
+                }
             }
         }
 

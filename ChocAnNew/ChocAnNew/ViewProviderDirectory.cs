@@ -31,13 +31,20 @@ namespace ChocAnNew
 
         private void UpdateProviderDir_Click(object sender, EventArgs e)
         {
-           /* string query = "UPDATE ";
-            connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
-            using (connectionSql = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connectionSql))
-            {
-                connectionSql.Open();
-            }*/
+            /* string query = "UPDATE ";
+             connectionString = ConfigurationManager.ConnectionStrings["ChocAnNew.Properties.Settings.DatabaseCAConnectionString"].ConnectionString;
+             using (connectionSql = new SqlConnection(connectionString))
+             using (SqlCommand command = new SqlCommand(query, connectionSql))
+             {
+                 connectionSql.Open();
+             }*/
+            ModifyProviderDirectory providerDir = new ModifyProviderDirectory();
+            providerDir.Show();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
