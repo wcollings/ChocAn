@@ -2,8 +2,6 @@ C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\Ch
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AddProviderMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.DeleteMemberMenu.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.DeleteProviderMenu.resources
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.Formtest.resources
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainForm.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuAdmin.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuProvider.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyMemberMenu.resources
@@ -51,7 +49,6 @@ C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.exe.config
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.exe
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\ChocAnNew.pdb
 C:\Users\Kaodili\source\repos\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.csprojAssemblyReference.cache
-C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MemberRecords.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ModifyMemberRecords.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderRecords.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA.mdf
@@ -113,3 +110,8 @@ C:\Users\Kaodili\source\repos\ChocAnNew2\ChocAnNew\ChocAnNew\ChocAnNew.exe
 C:\Users\Kaodili\source\repos\ChocAnNew2\ChocAnNew\ChocAnNew\ChocAnNew.pdb
 C:\Users\Kaodili\source\repos\ChocAnNew2\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.HomePage.resources
 C:\Users\Kaodili\source\repos\ChocAnNew2\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.addNewMember.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AccountPayableSummaryReport.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.HomePage.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.addNewMember.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuManager.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MemberReportt.resources

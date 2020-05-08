@@ -51,6 +51,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TotalTxtBox = new System.Windows.Forms.TextBox();
+            this.consTxtBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             streetLabel = new System.Windows.Forms.Label();
@@ -239,7 +241,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(954, 534);
+            this.button1.Location = new System.Drawing.Point(954, 563);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 41);
             this.button1.TabIndex = 42;
@@ -260,17 +262,38 @@
             // TotalTxtBox
             // 
             this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTxtBox.Location = new System.Drawing.Point(141, 534);
+            this.TotalTxtBox.Location = new System.Drawing.Point(237, 534);
             this.TotalTxtBox.Name = "TotalTxtBox";
             this.TotalTxtBox.ReadOnly = true;
             this.TotalTxtBox.Size = new System.Drawing.Size(228, 32);
             this.TotalTxtBox.TabIndex = 44;
             // 
+            // consTxtBox
+            // 
+            this.consTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consTxtBox.Location = new System.Drawing.Point(237, 572);
+            this.consTxtBox.Name = "consTxtBox";
+            this.consTxtBox.ReadOnly = true;
+            this.consTxtBox.Size = new System.Drawing.Size(228, 32);
+            this.consTxtBox.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 572);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 26);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Total consultations";
+            // 
             // ProviderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 602);
+            this.ClientSize = new System.Drawing.Size(1069, 634);
+            this.Controls.Add(this.consTxtBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalTxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -317,5 +340,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TotalTxtBox;
+        private System.Windows.Forms.TextBox consTxtBox;
+        private System.Windows.Forms.Label label2;
     }
 }

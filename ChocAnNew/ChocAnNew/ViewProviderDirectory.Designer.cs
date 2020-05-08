@@ -36,7 +36,6 @@
             this.providerDirectoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseCADataSet = new ChocAnNew.DatabaseCADataSet();
             this.providerDirectoryTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ProviderDirectoryTableAdapter();
-            this.UpdateProviderDir = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerDirectoryBindingSource)).BeginInit();
@@ -52,7 +51,7 @@
             this.serviceNameDataGridViewTextBoxColumn,
             this.feeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.providerDirectoryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 13);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -91,26 +90,16 @@
             // 
             this.providerDirectoryTableAdapter.ClearBeforeFill = true;
             // 
-            // UpdateProviderDir
-            // 
-            this.UpdateProviderDir.Location = new System.Drawing.Point(12, 333);
-            this.UpdateProviderDir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UpdateProviderDir.Name = "UpdateProviderDir";
-            this.UpdateProviderDir.Size = new System.Drawing.Size(172, 50);
-            this.UpdateProviderDir.TabIndex = 1;
-            this.UpdateProviderDir.Text = "Modify Directory";
-            this.UpdateProviderDir.UseVisualStyleBackColor = true;
-            this.UpdateProviderDir.Click += new System.EventHandler(this.UpdateProviderDir_Click);
-            // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(420, 324);
+            this.Cancel.Location = new System.Drawing.Point(449, 379);
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(135, 49);
             this.Cancel.TabIndex = 2;
-            this.Cancel.Text = "Cancel";
+            this.Cancel.Text = "Ok";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // ViewProviderDirectory
             // 
@@ -118,7 +107,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 485);
             this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.UpdateProviderDir);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewProviderDirectory";
@@ -140,7 +128,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn feeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button UpdateProviderDir;
         private System.Windows.Forms.Button Cancel;
     }
 }

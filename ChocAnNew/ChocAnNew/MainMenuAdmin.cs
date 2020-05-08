@@ -71,7 +71,8 @@ namespace ChocAnNew
 
         private void genManRepBtn_Click(object sender, EventArgs e)
         {
-            //This is where we need to put the logic to send the Manager Report
+            MainMenuManager man = new MainMenuManager();
+            man.Show();
         }
 
         private void modMemberRecs_Click(object sender, EventArgs e)
