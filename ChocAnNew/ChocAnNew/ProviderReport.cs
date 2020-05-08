@@ -47,13 +47,9 @@ namespace ChocAnNew
                 DataTable providerReportTable = new DataTable();
                 adapter.Fill(providerReportTable);
                 provGrid.DataSource= providerReportTable;
-
-                //Totals
-                Object totalO, totalcons;
+                Object totalO;
                 totalO = providerReportTable.Compute("Sum(Fee)","");
                 TotalTxtBox.Text = totalO.ToString();
-                totalcons = providerReportTable.Compute("COUNT(Fee)", "");
-                consTxtBox.Text = totalcons.ToString();
             }
         }
 

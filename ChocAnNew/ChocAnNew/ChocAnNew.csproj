@@ -62,23 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountPayableSummaryReport.cs">
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountPayableSummaryReport.Designer.cs">
-      <DependentUpon>AccountPayableSummaryReport.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuManager.cs">
+    <Compile Include="addNewMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenuManager.Designer.cs">
-      <DependentUpon>MainMenuManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MemberRecords.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MemberRecords.designer.cs">
-      <DependentUpon>MemberRecords.cs</DependentUpon>
+    <Compile Include="addNewMember.designer.cs">
+      <DependentUpon>addNewMember.cs</DependentUpon>
     </Compile>
     <Compile Include="AddProviderMenu.cs">
       <SubType>Form</SubType>
@@ -106,18 +100,6 @@
     <Compile Include="DeleteProviderMenu.Designer.cs">
       <DependentUpon>DeleteProviderMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formtest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formtest.Designer.cs">
-      <DependentUpon>Formtest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainMenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,12 +111,6 @@
     </Compile>
     <Compile Include="MainMenuProvider.Designer.cs">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MemberReportt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MemberReportt.Designer.cs">
-      <DependentUpon>MemberReportt.cs</DependentUpon>
     </Compile>
     <Compile Include="ModifyMemberMenu.cs">
       <SubType>Form</SubType>
@@ -198,14 +174,11 @@
     <Compile Include="ViewProviderDirectory.Designer.cs">
       <DependentUpon>ViewProviderDirectory.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountPayableSummaryReport.resx">
-      <DependentUpon>AccountPayableSummaryReport.cs</DependentUpon>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenuManager.resx">
-      <DependentUpon>MainMenuManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberRecords.resx">
-      <DependentUpon>MemberRecords.cs</DependentUpon>
+    <EmbeddedResource Include="addNewMember.resx">
+      <DependentUpon>addNewMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProviderMenu.resx">
       <DependentUpon>AddProviderMenu.cs</DependentUpon>
@@ -216,20 +189,11 @@
     <EmbeddedResource Include="DeleteProviderMenu.resx">
       <DependentUpon>DeleteProviderMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formtest.resx">
-      <DependentUpon>Formtest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuAdmin.resx">
       <DependentUpon>MainMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuProvider.resx">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberReportt.resx">
-      <DependentUpon>MemberReportt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyMemberMenu.resx">
       <DependentUpon>ModifyMemberMenu.cs</DependentUpon>

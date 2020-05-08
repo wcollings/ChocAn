@@ -249,7 +249,6 @@
             this.membersdataGridView.Size = new System.Drawing.Size(963, 194);
             this.membersdataGridView.TabIndex = 51;
             this.membersdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.membersdataGridView_CellClick);
-            //this.membersdataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.membersdataGridView_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

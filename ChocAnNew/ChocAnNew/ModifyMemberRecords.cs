@@ -76,7 +76,7 @@ namespace ChocAnNew
             city = this.cityMemberTextBox.Text;
             state = this.stateMemberTextBox.Text;
             zip = this.zipMemberTextBox.Text;
-            status = this.statusCheckBox.Text;
+            //status = this.statusCheckBox.Checked;
             comment = this.commentMemberTextBox.Text;
 
             String query = ("UPDATE Members SET Name = @MembersName, Street = @MembersStreet, " +
@@ -91,7 +91,7 @@ namespace ChocAnNew
                 command.Parameters.AddWithValue("@MembersCity", city);
                 command.Parameters.AddWithValue("@MembersState", state);
                 command.Parameters.AddWithValue("@MembersZip", zip);
-                command.Parameters.AddWithValue("@MembersStatus", status);
+                command.Parameters.AddWithValue("@MembersStatus", statusCheckBox.Checked);
                 command.Parameters.AddWithValue("@MembersReason", comment);
                 command.Parameters.AddWithValue("@MembersEmail", email);
                 command.Parameters.AddWithValue("@MembersId", idMemberTextBox.Text);
@@ -131,6 +131,7 @@ namespace ChocAnNew
 
         private void membersdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //statusDataGridViewCheckBoxColumn col = new statusDataGridViewCheckBoxColumn();
             membersdataGridView.CurrentRow.Selected = true;
             idMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
             nameMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["nameDataGridViewTextBoxColumn"].FormattedValue.ToString();
@@ -138,7 +139,7 @@ namespace ChocAnNew
             cityMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["cityDataGridViewTextBoxColumn"].FormattedValue.ToString();
             stateMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["stateDataGridViewTextBoxColumn"].FormattedValue.ToString();
             zipMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["zipDataGridViewTextBoxColumn"].FormattedValue.ToString();
-            statusCheckBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["statusDataGridViewcheckBoxColumn"].FormattedValue.ToString();
+            //statusCheckBox = [bool]membersdataGridView.Rows[e.RowIndex].Cells["statusDataGridViewTextBoxColumn"].Value;
             commentMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["reasonDataGridViewTextBoxColumn"].FormattedValue.ToString();
             emailMemberTextBox.Text = membersdataGridView.Rows[e.RowIndex].Cells["emailDataGridViewTextBoxColumn"].FormattedValue.ToString();
         }

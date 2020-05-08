@@ -42,5 +42,10 @@ namespace ChocAnNew
             Search search = new Search("provider id");
             search.Show();
         }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

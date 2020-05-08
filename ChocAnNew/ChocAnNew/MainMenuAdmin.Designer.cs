@@ -29,41 +29,31 @@
         private void InitializeComponent()
         {
             this.memRecBtn = new System.Windows.Forms.Button();
-            this.chocAnMMAdminLbl = new System.Windows.Forms.Label();
             this.modProBtn = new System.Windows.Forms.Button();
             this.modProDirBtn = new System.Windows.Forms.Button();
             this.accProDirBtn = new System.Windows.Forms.Button();
             this.genManRepBtn = new System.Windows.Forms.Button();
             this.modMemberRecs = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // memRecBtn
             // 
             this.memRecBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memRecBtn.Location = new System.Drawing.Point(77, 116);
+            this.memRecBtn.Location = new System.Drawing.Point(90, 90);
             this.memRecBtn.Margin = new System.Windows.Forms.Padding(4);
             this.memRecBtn.Name = "memRecBtn";
             this.memRecBtn.Size = new System.Drawing.Size(332, 52);
             this.memRecBtn.TabIndex = 0;
-            this.memRecBtn.Text = "Member Records";
+            this.memRecBtn.Text = "Add Member";
             this.memRecBtn.UseVisualStyleBackColor = true;
             this.memRecBtn.Click += new System.EventHandler(this.addMemBtn_Click);
-            // 
-            // chocAnMMAdminLbl
-            // 
-            this.chocAnMMAdminLbl.AutoSize = true;
-            this.chocAnMMAdminLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chocAnMMAdminLbl.Location = new System.Drawing.Point(65, 11);
-            this.chocAnMMAdminLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.chocAnMMAdminLbl.Name = "chocAnMMAdminLbl";
-            this.chocAnMMAdminLbl.Size = new System.Drawing.Size(333, 31);
-            this.chocAnMMAdminLbl.TabIndex = 1;
-            this.chocAnMMAdminLbl.Text = "Main Menu ChocAn Admin";
             // 
             // modProBtn
             // 
             this.modProBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modProBtn.Location = new System.Drawing.Point(77, 337);
+            this.modProBtn.Location = new System.Drawing.Point(90, 206);
             this.modProBtn.Margin = new System.Windows.Forms.Padding(4);
             this.modProBtn.Name = "modProBtn";
             this.modProBtn.Size = new System.Drawing.Size(332, 52);
@@ -75,7 +65,7 @@
             // modProDirBtn
             // 
             this.modProDirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modProDirBtn.Location = new System.Drawing.Point(77, 394);
+            this.modProDirBtn.Location = new System.Drawing.Point(90, 264);
             this.modProDirBtn.Margin = new System.Windows.Forms.Padding(4);
             this.modProDirBtn.Name = "modProDirBtn";
             this.modProDirBtn.Size = new System.Drawing.Size(332, 52);
@@ -87,7 +77,7 @@
             // accProDirBtn
             // 
             this.accProDirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accProDirBtn.Location = new System.Drawing.Point(77, 449);
+            this.accProDirBtn.Location = new System.Drawing.Point(90, 322);
             this.accProDirBtn.Margin = new System.Windows.Forms.Padding(4);
             this.accProDirBtn.Name = "accProDirBtn";
             this.accProDirBtn.Size = new System.Drawing.Size(332, 52);
@@ -99,7 +89,7 @@
             // genManRepBtn
             // 
             this.genManRepBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genManRepBtn.Location = new System.Drawing.Point(77, 505);
+            this.genManRepBtn.Location = new System.Drawing.Point(90, 380);
             this.genManRepBtn.Margin = new System.Windows.Forms.Padding(4);
             this.genManRepBtn.Name = "genManRepBtn";
             this.genManRepBtn.Size = new System.Drawing.Size(332, 52);
@@ -111,7 +101,7 @@
             // modMemberRecs
             // 
             this.modMemberRecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modMemberRecs.Location = new System.Drawing.Point(77, 211);
+            this.modMemberRecs.Location = new System.Drawing.Point(90, 148);
             this.modMemberRecs.Name = "modMemberRecs";
             this.modMemberRecs.Size = new System.Drawing.Size(332, 52);
             this.modMemberRecs.TabIndex = 10;
@@ -119,17 +109,39 @@
             this.modMemberRecs.UseVisualStyleBackColor = true;
             this.modMemberRecs.Click += new System.EventHandler(this.modMemberRecs_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(51, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(448, 39);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "CHOC-AN DATA CENTER";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 474);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "ChocAn";
+            // 
             // MainMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 572);
+            this.ClientSize = new System.Drawing.Size(546, 510);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.modMemberRecs);
             this.Controls.Add(this.genManRepBtn);
             this.Controls.Add(this.accProDirBtn);
             this.Controls.Add(this.modProDirBtn);
             this.Controls.Add(this.modProBtn);
-            this.Controls.Add(this.chocAnMMAdminLbl);
             this.Controls.Add(this.memRecBtn);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenuAdmin";
@@ -142,11 +154,12 @@
         #endregion
 
         private System.Windows.Forms.Button memRecBtn;
-        private System.Windows.Forms.Label chocAnMMAdminLbl;
         private System.Windows.Forms.Button modProBtn;
         private System.Windows.Forms.Button modProDirBtn;
         private System.Windows.Forms.Button accProDirBtn;
         private System.Windows.Forms.Button genManRepBtn;
         private System.Windows.Forms.Button modMemberRecs;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

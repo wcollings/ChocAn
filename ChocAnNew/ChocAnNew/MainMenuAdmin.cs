@@ -20,7 +20,7 @@ namespace ChocAnNew
 
         private void addMemBtn_Click(object sender, EventArgs e)
         {
-            MemberRecords add = new MemberRecords();// modify is going to need something in the loading to get the menu.
+            addNewMember add = new addNewMember();// modify is going to need something in the loading to get the menu.
             add.Show();
         }
 
