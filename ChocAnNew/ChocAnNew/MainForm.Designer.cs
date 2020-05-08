@@ -63,6 +63,7 @@
             this.providerMenuBtn = new System.Windows.Forms.Button();
             this.serviceRecordTableAdapter = new ChocAnNew.DatabaseCADataSetTableAdapters.ServiceRecordTableAdapter();
             this.tableAdapterManager = new ChocAnNew.DatabaseCADataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             providerIdLabel = new System.Windows.Forms.Label();
             memberIdLabel = new System.Windows.Forms.Label();
@@ -79,63 +80,63 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(96, 46);
+            idLabel.Location = new System.Drawing.Point(108, 58);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(23, 17);
+            idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 1;
             idLabel.Text = "Id:";
             // 
             // providerIdLabel
             // 
             providerIdLabel.AutoSize = true;
-            providerIdLabel.Location = new System.Drawing.Point(96, 71);
+            providerIdLabel.Location = new System.Drawing.Point(108, 89);
             providerIdLabel.Name = "providerIdLabel";
-            providerIdLabel.Size = new System.Drawing.Size(80, 17);
+            providerIdLabel.Size = new System.Drawing.Size(88, 20);
             providerIdLabel.TabIndex = 3;
             providerIdLabel.Text = "Provider Id:";
             // 
             // memberIdLabel
             // 
             memberIdLabel.AutoSize = true;
-            memberIdLabel.Location = new System.Drawing.Point(96, 97);
+            memberIdLabel.Location = new System.Drawing.Point(108, 121);
             memberIdLabel.Name = "memberIdLabel";
-            memberIdLabel.Size = new System.Drawing.Size(78, 17);
+            memberIdLabel.Size = new System.Drawing.Size(89, 20);
             memberIdLabel.TabIndex = 5;
             memberIdLabel.Text = "Member Id:";
             // 
             // serviceCodeLabel
             // 
             serviceCodeLabel.AutoSize = true;
-            serviceCodeLabel.Location = new System.Drawing.Point(96, 122);
+            serviceCodeLabel.Location = new System.Drawing.Point(108, 152);
             serviceCodeLabel.Name = "serviceCodeLabel";
-            serviceCodeLabel.Size = new System.Drawing.Size(96, 17);
+            serviceCodeLabel.Size = new System.Drawing.Size(107, 20);
             serviceCodeLabel.TabIndex = 7;
             serviceCodeLabel.Text = "Service Code:";
             // 
             // currentDateAndTimeLabel
             // 
             currentDateAndTimeLabel.AutoSize = true;
-            currentDateAndTimeLabel.Location = new System.Drawing.Point(96, 149);
+            currentDateAndTimeLabel.Location = new System.Drawing.Point(108, 186);
             currentDateAndTimeLabel.Name = "currentDateAndTimeLabel";
-            currentDateAndTimeLabel.Size = new System.Drawing.Size(157, 17);
+            currentDateAndTimeLabel.Size = new System.Drawing.Size(176, 20);
             currentDateAndTimeLabel.TabIndex = 9;
             currentDateAndTimeLabel.Text = "Current Date And Time:";
             // 
             // serviceDateLabel
             // 
             serviceDateLabel.AutoSize = true;
-            serviceDateLabel.Location = new System.Drawing.Point(96, 175);
+            serviceDateLabel.Location = new System.Drawing.Point(108, 219);
             serviceDateLabel.Name = "serviceDateLabel";
-            serviceDateLabel.Size = new System.Drawing.Size(93, 17);
+            serviceDateLabel.Size = new System.Drawing.Size(104, 20);
             serviceDateLabel.TabIndex = 11;
             serviceDateLabel.Text = "Service Date:";
             // 
             // commentsLabel
             // 
             commentsLabel.AutoSize = true;
-            commentsLabel.Location = new System.Drawing.Point(96, 199);
+            commentsLabel.Location = new System.Drawing.Point(108, 249);
             commentsLabel.Name = "commentsLabel";
-            commentsLabel.Size = new System.Drawing.Size(78, 17);
+            commentsLabel.Size = new System.Drawing.Size(90, 20);
             commentsLabel.TabIndex = 13;
             commentsLabel.Text = "Comments:";
             // 
@@ -171,7 +172,7 @@
             this.serviceRecordBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.serviceRecordBindingNavigator.Name = "serviceRecordBindingNavigator";
             this.serviceRecordBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.serviceRecordBindingNavigator.Size = new System.Drawing.Size(837, 31);
+            this.serviceRecordBindingNavigator.Size = new System.Drawing.Size(942, 31);
             this.serviceRecordBindingNavigator.TabIndex = 0;
             this.serviceRecordBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -192,7 +193,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -233,7 +234,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(45, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -277,72 +278,72 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceRecordBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(257, 43);
+            this.idTextBox.Location = new System.Drawing.Point(289, 54);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(249, 22);
+            this.idTextBox.Size = new System.Drawing.Size(280, 26);
             this.idTextBox.TabIndex = 2;
             // 
             // providerIdTextBox
             // 
             this.providerIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceRecordBindingSource, "ProviderId", true));
-            this.providerIdTextBox.Location = new System.Drawing.Point(257, 69);
+            this.providerIdTextBox.Location = new System.Drawing.Point(289, 86);
             this.providerIdTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.providerIdTextBox.Name = "providerIdTextBox";
-            this.providerIdTextBox.Size = new System.Drawing.Size(249, 22);
+            this.providerIdTextBox.Size = new System.Drawing.Size(280, 26);
             this.providerIdTextBox.TabIndex = 4;
             // 
             // memberIdTextBox
             // 
             this.memberIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceRecordBindingSource, "MemberId", true));
-            this.memberIdTextBox.Location = new System.Drawing.Point(257, 95);
+            this.memberIdTextBox.Location = new System.Drawing.Point(289, 119);
             this.memberIdTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.memberIdTextBox.Name = "memberIdTextBox";
-            this.memberIdTextBox.Size = new System.Drawing.Size(249, 22);
+            this.memberIdTextBox.Size = new System.Drawing.Size(280, 26);
             this.memberIdTextBox.TabIndex = 6;
             // 
             // serviceCodeTextBox
             // 
             this.serviceCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceRecordBindingSource, "ServiceCode", true));
-            this.serviceCodeTextBox.Location = new System.Drawing.Point(257, 119);
+            this.serviceCodeTextBox.Location = new System.Drawing.Point(289, 149);
             this.serviceCodeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.serviceCodeTextBox.Name = "serviceCodeTextBox";
-            this.serviceCodeTextBox.Size = new System.Drawing.Size(249, 22);
+            this.serviceCodeTextBox.Size = new System.Drawing.Size(280, 26);
             this.serviceCodeTextBox.TabIndex = 8;
             // 
             // currentDateAndTimeDateTimePicker
             // 
             this.currentDateAndTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.serviceRecordBindingSource, "CurrentDateAndTime", true));
-            this.currentDateAndTimeDateTimePicker.Location = new System.Drawing.Point(257, 145);
+            this.currentDateAndTimeDateTimePicker.Location = new System.Drawing.Point(289, 181);
             this.currentDateAndTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.currentDateAndTimeDateTimePicker.Name = "currentDateAndTimeDateTimePicker";
-            this.currentDateAndTimeDateTimePicker.Size = new System.Drawing.Size(249, 22);
+            this.currentDateAndTimeDateTimePicker.Size = new System.Drawing.Size(280, 26);
             this.currentDateAndTimeDateTimePicker.TabIndex = 10;
             // 
             // serviceDateDateTimePicker
             // 
             this.serviceDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.serviceRecordBindingSource, "ServiceDate", true));
-            this.serviceDateDateTimePicker.Location = new System.Drawing.Point(257, 171);
+            this.serviceDateDateTimePicker.Location = new System.Drawing.Point(289, 214);
             this.serviceDateDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.serviceDateDateTimePicker.Name = "serviceDateDateTimePicker";
-            this.serviceDateDateTimePicker.Size = new System.Drawing.Size(249, 22);
+            this.serviceDateDateTimePicker.Size = new System.Drawing.Size(280, 26);
             this.serviceDateDateTimePicker.TabIndex = 12;
             // 
             // commentsTextBox
             // 
             this.commentsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.serviceRecordBindingSource, "Comments", true));
-            this.commentsTextBox.Location = new System.Drawing.Point(257, 197);
+            this.commentsTextBox.Location = new System.Drawing.Point(289, 246);
             this.commentsTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.commentsTextBox.Name = "commentsTextBox";
-            this.commentsTextBox.Size = new System.Drawing.Size(249, 22);
+            this.commentsTextBox.Size = new System.Drawing.Size(280, 26);
             this.commentsTextBox.TabIndex = 14;
             // 
             // adminBtn
             // 
-            this.adminBtn.Location = new System.Drawing.Point(215, 278);
-            this.adminBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.adminBtn.Location = new System.Drawing.Point(384, 337);
+            this.adminBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.adminBtn.Name = "adminBtn";
-            this.adminBtn.Size = new System.Drawing.Size(100, 28);
+            this.adminBtn.Size = new System.Drawing.Size(112, 35);
             this.adminBtn.TabIndex = 15;
             this.adminBtn.Text = "Admin View";
             this.adminBtn.UseVisualStyleBackColor = true;
@@ -350,10 +351,10 @@
             // 
             // providerMenuBtn
             // 
-            this.providerMenuBtn.Location = new System.Drawing.Point(323, 278);
-            this.providerMenuBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.providerMenuBtn.Location = new System.Drawing.Point(505, 337);
+            this.providerMenuBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.providerMenuBtn.Name = "providerMenuBtn";
-            this.providerMenuBtn.Size = new System.Drawing.Size(113, 28);
+            this.providerMenuBtn.Size = new System.Drawing.Size(127, 35);
             this.providerMenuBtn.TabIndex = 16;
             this.providerMenuBtn.Text = "Provider View";
             this.providerMenuBtn.UseVisualStyleBackColor = true;
@@ -372,11 +373,22 @@
             this.tableAdapterManager.ServiceRecordTableAdapter = this.serviceRecordTableAdapter;
             this.tableAdapterManager.UpdateOrder = ChocAnNew.DatabaseCADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(215, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 34);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Manager View";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 342);
+            this.ClientSize = new System.Drawing.Size(942, 428);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.providerMenuBtn);
             this.Controls.Add(this.adminBtn);
             this.Controls.Add(idLabel);
@@ -436,6 +448,7 @@
         private System.Windows.Forms.Button providerMenuBtn;
         private DatabaseCADataSetTableAdapters.ServiceRecordTableAdapter serviceRecordTableAdapter;
         private DatabaseCADataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button button1;
     }
 }
 

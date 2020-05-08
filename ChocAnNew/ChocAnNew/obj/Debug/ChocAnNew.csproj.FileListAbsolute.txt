@@ -56,3 +56,6 @@ C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\Ch
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.ProviderRecords.resources
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA.mdf
 C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\DatabaseCA_log.ldf
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MainMenuManager.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.AccountPayableSummaryReport.resources
+C:\Users\Hadeel soliman\Documents\GitHub\ChocAn\ChocAnNew\ChocAnNew\obj\Debug\ChocAnNew.MemberReportt.resources

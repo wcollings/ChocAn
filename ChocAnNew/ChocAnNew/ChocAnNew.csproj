@@ -62,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountPayableSummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountPayableSummaryReport.Designer.cs">
+      <DependentUpon>AccountPayableSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuManager.Designer.cs">
+      <DependentUpon>MainMenuManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemberRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
     <Compile Include="MainMenuProvider.Designer.cs">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberReportt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberReportt.Designer.cs">
+      <DependentUpon>MemberReportt.cs</DependentUpon>
     </Compile>
     <Compile Include="ModifyMemberMenu.cs">
       <SubType>Form</SubType>
@@ -180,6 +198,12 @@
     <Compile Include="ViewProviderDirectory.Designer.cs">
       <DependentUpon>ViewProviderDirectory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountPayableSummaryReport.resx">
+      <DependentUpon>AccountPayableSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuManager.resx">
+      <DependentUpon>MainMenuManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemberRecords.resx">
       <DependentUpon>MemberRecords.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuProvider.resx">
       <DependentUpon>MainMenuProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberReportt.resx">
+      <DependentUpon>MemberReportt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyMemberMenu.resx">
       <DependentUpon>ModifyMemberMenu.cs</DependentUpon>
