@@ -47,5 +47,11 @@ namespace ChocAnNew
             MainMenuProvider provider = new MainMenuProvider();
             provider.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MainMenuManager mainManager = new MainMenuManager();
+            mainManager.Show();
+        }
     }
 }
